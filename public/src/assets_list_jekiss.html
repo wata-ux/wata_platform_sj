@@ -1,0 +1,362 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+            <div class="btn-group ml-2">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
+                        <ul class="item-list mb-2">
+                            <li><a href="#n" class="active"><i
+                                        class="material-icons">location_on</i><span>개별위치</span></a></li>
+                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
+                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
+                            <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="map-location ml-2">
+                <div class="location-header d-flex align-items-center">
+                    <strong>프로젝트 A</strong>
+                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location"
+                        href="#map-location">
+                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                    </a>
+                </div>
+                <div class="collapse location-body" id="map-location">
+                    <div class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01"
+                                    data-perfect-scrollbar>
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">4F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">5F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">6F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">7F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02"
+                                    data-perfect-scrollbar>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('./include/platform-tools.html')
+    </div>
+    <!-- drawer -->
+    <!-- <div class="navbar-toggler-box">
+        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+    </div> -->
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-assets active" id="sm-assets">
+                        <div class="assets-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">자산관리</h3>
+                                        <p class="text-70 mb-0">자산관리 페이지입니다.</p>
+                                    </div>
+                                </div>
+                                <a href="assets_write.html" class="btn btn-outline-dark">신규등록</a>
+                            </div>
+                            <div class="container-fluid">
+                                <em class="none-list mb-4">등록한 자산이 없습니다.</em>
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span>총 <strong class="text-iden">7</strong>개</span>
+                                    </div>
+                                    <ul class="sidebar-menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-level01" data-toggle="collapse" href="#workers_info">
+                                                <span class="dot dot-level01"></span>
+                                                <span class="text-30 pr-2 font-size-12pt">A0001</span>
+                                                <span class="title text-dark">온습도 센서</span> 
+                                                <span class="sidebar-menu-badge ml-auto mr-2">좋음</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">POS-21-A014</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">최근 응답일</span>
+                                                        <p class="m-0">2021.04.21 16:41:12</p>
+                                                    </div>
+                                                    <div class="btn-cover">
+                                                        <a href="assets_board.html" class="btn">자세히보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-level01" data-toggle="collapse" href="#workers_info2">
+                                                <span class="dot"></span>
+                                                <span class="text-30 pr-2 font-size-12pt">A0002</span>
+                                                <span class="title text-dark">온습도 센서</span> 
+                                                <span class="sidebar-menu-badge ml-auto mr-2">좋음</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info2">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">SAMSUNG-21-A014</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">최근 응답일</span>
+                                                        <p class="m-0">2021.04.21 16:41:12</p>
+                                                    </div>
+                                                    <div class="btn-cover">
+                                                        <a href="assets_board.html" class="btn">자세히보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-level03" data-toggle="collapse"
+                                                href="#workers_info3">
+                                                <span class="dot"></span>
+                                                <span class="text-30 pr-2 font-size-12pt">A0003</span>
+                                                <span class="title text-dark">온습도 센서</span> 
+                                                <span class="sidebar-menu-badge ml-auto mr-2">불량</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info3">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">SAMSUNG-21-A015</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">최근 응답일</span>
+                                                        <p class="m-0">2021.04.21 16:41:12</p>
+                                                    </div>
+                                                    <div class="btn-cover">
+                                                        <a href="assets_board.html" class="btn">자세히보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-level04" data-toggle="collapse" href="#workers_info4">
+                                                <span class="dot"></span>
+                                                <span class="text-30 pr-2 font-size-12pt">A0004</span>
+                                                <span class="title text-dark">온습도 센서</span> 
+                                                <span class="sidebar-menu-badge ml-auto mr-2">신호없음</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info4">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">LG-24-QT245K8</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">최근 응답일</span>
+                                                        <p class="m-0">2021.04.21 16:41:12</p>
+                                                    </div>
+                                                    <div class="btn-cover">
+                                                        <a href="assets_board.html" class="btn">자세히보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-level01" data-toggle="collapse" href="#workers_info5">
+                                                <span class="dot"></span>
+                                                <span class="text-30 pr-2 font-size-12pt">A0005</span>
+                                                <span class="title text-dark">온습도 센서</span> 
+                                                <span class="sidebar-menu-badge ml-auto mr-2">좋음</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info5">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">LG-24-QT245K8</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">최근 응답일</span>
+                                                        <p class="m-0">2021.04.21 16:41:12</p>
+                                                    </div>
+                                                    <div class="btn-cover">
+                                                        <a href="assets_board.html" class="btn">자세히보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-level01" data-toggle="collapse" href="#workers_info6">
+                                                <span class="dot"></span>
+                                                <span class="text-30 pr-2 font-size-12pt">A0006</span>
+                                                <span class="title text-dark">온습도 센서</span> 
+                                                <span class="sidebar-menu-badge ml-auto mr-2">좋음</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info6">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">LG-24-QT245K8</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">최근 응답일</span>
+                                                        <p class="m-0">2021.04.21 16:41:12</p>
+                                                    </div>
+                                                    <div class="btn-cover">
+                                                        <a href="assets_board.html" class="btn">자세히보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-level01" data-toggle="collapse" href="#workers_info7">
+                                                <span class="dot"></span>
+                                                <span class="text-30 pr-2 font-size-12pt">A0007</span>
+                                                <span class="title text-dark">온습도 센서</span> 
+                                                <span class="sidebar-menu-badge ml-auto mr-2">좋음</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info7">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">LG-24-QT245K8</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">최근 응답일</span>
+                                                        <p class="m-0">2021.04.21 16:41:12</p>
+                                                    </div>
+                                                    <div class="btn-cover">
+                                                        <a href="assets_board.html" class="btn">자세히보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-level02" data-toggle="collapse" href="#workers_info8">
+                                                <span class="dot"></span>
+                                                <span class="text-30 pr-2 font-size-12pt">A0008</span>
+                                                <span class="title text-dark">온습도 센서</span> 
+                                                <span class="sidebar-menu-badge ml-auto mr-2">보통</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info8">
+                                                <div class="cover">
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">모델넘버</span>
+                                                        <p class="m-0">LG-24-QT245K8</p>
+                                                    </div>
+                                                    <div class="col-6 p-2">
+                                                        <span class="text-50">최근 응답일</span>
+                                                        <p class="m-0">2021.04.21 16:41:12</p>
+                                                    </div>
+                                                    <div class="btn-cover">
+                                                        <a href="assets_board.html" class="btn">자세히보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

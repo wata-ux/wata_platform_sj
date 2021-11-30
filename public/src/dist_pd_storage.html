@@ -1,0 +1,372 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout float-contents">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+        </div>
+        @@include('./include/platform-tools.html')
+        <div class="cd-panel cd-panel--from-right js-cd-panel-main cd-panel--is-visible">
+            <a href="#0" class="cd-panel__close js-cd-close">Close</a>
+
+            <div class="cd-panel__container">
+                <div class="cd-panel__content p-4" data-perfect-scrollbar>
+                    <div class="d-flex flex-row align-items-center mb-0 pb-4">
+                        <div class="flex">
+                            <h3 class="d-flex align-items-center mb-0">히스토리</h3>
+                            <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
+                        </div>
+                        <div class="flatpickr-wrapper d-none">
+                            <div id="recent_orders_date" data-toggle="flatpickr" data-flatpickr-wrap="true"
+                                data-flatpickr-mode="range" data-flatpickr-alt-format="d/m/Y"
+                                data-flatpickr-date-format="d/m/Y">
+                                <a href="javascript:void(0)" class="d-flex" data-toggle>
+                                    <span class="material-icons-outlined">edit_calendar</span>
+                                </a>
+                                <input class="flatpickr-hidden-input" type="hidden" value="01/01/2021 to 31/12/2021"
+                                    data-input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group mb-3 w-100">
+                        <a href="dist_pd_warehousing.html" class="btn btn-outline-secondary">입고</a>
+                        <a href="dist_pd_release.html" class="btn btn-outline-secondary">출고</a>
+                        <a href="dist_pd_adjust.html" class="btn btn-outline-secondary">조정</a>
+                        <a href="dist_pd_move.html" class="btn btn-outline-secondary">이동</a>
+                    </div>
+                    <div class="accordion js-accordion accordion--boxed list-group-flush" id="parent">
+                        <div class="accordion__item open">
+                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                data-target="#panel02" data-parent="#parent">
+                                <span class="flex d-flex align-items-center">
+                                    <!-- <span class="material-icons-outlined icon--left">watch_later</span> -->
+                                    현재 재고 및 내역
+                                </span>
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <div class="accordion__menu collapse show" id="panel02">
+                                <div class="accordion__menu-link align-items-center">
+                                    <em class="flex text-dark font-size-24pt">2,354</em>
+                                    <div class="visitor-group">
+                                        <ul class="mb-0">
+                                            <li>입고<span class="text-accent">100</span></li>
+                                            <li>출고<span class="text-primary">400</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion__menu-link">
+                                    <div class="panel-list">
+                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
+                                            <!-- <div class="d-flex">
+                                                <i class="material-icons text-30">archive</i>
+                                            </div> -->
+                                            <div class="mr-3">
+                                                <h6><span
+                                                        class="material-icons font-size-16pt icon--left">arrow_downward</span>입고
+                                                    대기</h6>
+                                                <ul class="mb-2">
+                                                    <li>2021-08-23 15:29:04</li>
+                                                    <li>창고1</li>
+                                                </ul>
+                                                <span class="writer">leo jeong</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <h6>+5</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <div>15</div>
+                                                    <span
+                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
+                                                    <div>100</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="accordion__menu-link state-up">
+                                    <div class="panel-list">
+                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
+                                            <!-- <div class="d-flex">
+                                                <i class="material-icons text-30">archive</i>
+                                            </div> -->
+                                            <div class="mr-3">
+                                                <h6><span
+                                                        class="material-icons font-size-16pt icon--left">arrow_downward</span>입고
+                                                    완료</h6>
+                                                <ul class="mb-2">
+                                                    <li>2021-08-23 15:29:04</li>
+                                                    <li>창고1</li>
+                                                </ul>
+                                                <span class="writer">leo jeong</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <h6>+100</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <div>15</div>
+                                                    <span
+                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
+                                                    <div>100</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="accordion__menu-link state-down">
+                                    <div class="panel-list">
+                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
+                                            <div class="mr-3">
+                                                <h6><span
+                                                        class="material-icons font-size-16pt icon--left">arrow_upward</span>출고
+                                                    완료</h6>
+                                                <ul class="mb-2">
+                                                    <li>2021-08-23 15:29:04</li>
+                                                    <li>창고1</li>
+                                                </ul>
+                                                <span class="writer">leo jeong</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <h6>-5</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <div>15</div>
+                                                    <span
+                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
+                                                    <div>100</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="accordion__menu-link state-down">
+                                    <div class="panel-list">
+                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
+                                            <div class="mr-3">
+                                                <h6><span
+                                                        class="material-icons font-size-16pt icon--left">swap_vert</span>조정
+                                                    완료</h6>
+                                                <ul class="mb-2">
+                                                    <li>2021-08-23 15:29:04</li>
+                                                    <li>창고1</li>
+                                                </ul>
+                                                <span class="writer">leo jeong</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <h6>-23</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <div>15</div>
+                                                    <span
+                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
+                                                    <div>100</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- cd-panel__content -->
+            </div> <!-- cd-panel__container -->
+        </div> <!-- cd-panel -->
+        <!-- // END drawer -->
+        <div class="sidebar-depth sidebar-float" data-perfect-scrollbar>
+            <div class="sidebar-depth-wrap">
+                <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
+                    <div class="flex title-row">
+                        <h3 class="d-flex align-items-center mb-0 ">제품목록</h3>
+                    </div>
+                    <!-- <div class="btn-group">
+                        <a href="#n" class="btn btn-rounded btn-outline-dark dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">더보기</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">QR 인쇄</a>
+                            <a class="dropdown-item" href="#">복제</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-primary" href="dist_pd_write.html"> 수정</a>
+                            <a class="dropdown-item text-danger" href="#"> 삭제</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="contents-view">
+                    <div class="page-separator mt-5">
+                        <div class="page-separator__text">창고1 보관 정보</div>
+                    </div>
+                    <table class="table mb-4 table-nowrap thead-bg-light">
+                        <thead>
+                            <tr>
+                                <th>제품정보</th>
+                                <th>재고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="dist_pd_storage_board.html">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <span class="avatar mr-12pt">
+                                                <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                            </span>
+                                            <div class="flex">
+                                                <h6 class="m-0">제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</h6>
+                                                <div class="card-subtitle text-50">
+                                                    <small class="mr-2">특대</small>
+                                                    <small class="mr-2">300g x 15</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>1,200</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="dist_pd_storage_board.html">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <span class="avatar mr-12pt">
+                                                <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
+                                            </span>
+                                            <div class="flex">
+                                                <h6 class="m-0">제주 한라봉 수제 쿠키(16개입)</h6>
+                                                <div class="card-subtitle text-50">
+                                                    <small class="mr-2">특대</small>
+                                                    <small class="mr-2">300g x 15</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>1,200</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-distribution active" id="sm-distribution">
+                        <!-- 프로젝트 등록 -->
+                        <div class="distribution-inner">
+                            <div class="container-fluid py-4">
+                                <div class="flex d-flex align-items-center">
+                                    <a href="dist_data_landing.html" class="circle-pin pr-2"><i
+                                            class="material-icons">arrow_back</i></a>
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">창고</h3>
+                                    </div>
+                                    <a href="dist_pd_storage_write.html" class="btn btn-outline-dark ml-auto">창고 추가</a>
+                                </div>
+                            </div>
+                            <div class="list-opt-box">
+                                <div class="cell serach-box">
+                                    <input type="text" placeholder="창고 검색">
+                                    <a href="#n" class="btn btn-secondary btn-sm ml-auto">검색</a>
+                                </div>
+                            </div>
+                            <div class="mb-4 d-none">
+                                <ul class="sidebar-menu">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info">
+                                            창고1
+                                            <span class="ml-auto px-2 text-dark">45</span>
+                                            <span class="sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <div class="sidebar-submenu collapse sm-indent" id="workers_info">
+                                            <div class="cover">
+                                                <div class="col-6 p-2">
+                                                    <span class="text-50">재고 수량</span>
+                                                    <p class="m-0">45</p>
+                                                </div>
+                                                <div class="col-6 p-2">
+                                                    <span class="text-50">수용 가능 수량</span>
+                                                    <p class="m-0">100</p>
+                                                </div>
+                                                <div class="col-12 p-2">
+                                                    <span class="text-50">메모</span>
+                                                    <p class="m-0">발효유자의 피부생기효과로 끈적임 없이 부드럽게 메이크업을 제거하는 딥 클렌징 오일</p>
+                                                </div>
+                                                <div class="btn-cover mt-3">
+                                                    <a href="#n" class="btn">삭제</a>
+                                                    <a href="dist_pd_storage_write.html" class="btn">수정</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" data-toggle="collapse" href="#workers_info2">
+                                            창고2
+                                            <span class="ml-auto px-2 text-dark">4,947</span>
+                                            <span class="sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <div class="sidebar-submenu collapse sm-indent" id="workers_info2">
+                                            <div class="cover">
+                                                <div class="col-6 p-2">
+                                                    <span class="text-50">재고 수량</span>
+                                                    <p class="m-0">4,947</p>
+                                                </div>
+                                                <div class="col-6 p-2">
+                                                    <span class="text-50">수용 가능 수량</span>
+                                                    <p class="m-0">10,000</p>
+                                                </div>
+                                                <div class="col-12 p-2">
+                                                    <span class="text-50">메모</span>
+                                                    <p class="m-0">발효유자의 피부생기효과로 끈적임 없이 부드럽게 메이크업을 제거하는 딥 클렌징 오일</p>
+                                                </div>
+                                                <div class="btn-cover mt-3">
+                                                    <a href="#n" class="btn">삭제</a>
+                                                    <a href="dist_pd_storage_write.html" class="btn">수정</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="list-group row-list list-group-flush mb-4">
+                                <div class="list-group-item d-flex">
+                                    <div class="flex d-flex align-items-center mr-16pt">
+                                        <div class="flex list-els">
+                                            <div class="card-title">창고1</div>
+                                            <div class="card-subtitle text-50">창고1 메모</div>
+                                        </div>
+                                        <div class="pd-count">2,400</div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                            class="text-muted py-3 px-2"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item text-primary">수정</a>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex">
+                                    <div class="flex d-flex align-items-center mr-16pt">
+                                        <div class="flex list-els">
+                                            <div class="card-title">창고2</div>
+                                            <div class="card-subtitle text-50">창고2 메모</div>
+                                        </div>
+                                        <div class="pd-count">4,567</div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                            class="text-muted py-3 px-2"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item text-primary">수정</a>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

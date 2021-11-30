@@ -1,0 +1,213 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout float-contents">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+        </div>
+        @@include('./include/platform-tools.html')
+        <div class="sidebar-depth" data-perfect-scrollbar>
+            <div class="sidebar-depth-wrap">
+                <div class="tab-cover mb-4">
+                    <ul class="nav tab-menu" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#sidebar-menu04">전체</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="sidebar-menu04" class="tab-pane active" role="tabpanel">
+                        <div class="ch-group">
+                            <div class="row mb-5">
+                                <div class="col-md-6 col-lg-3 d-flex">
+                                    <div class="card m-0">
+                                        <div class="card-body">
+                                            <h6>총 재고</h6>
+                                            <div class="cell">
+                                                <em>2,405</em>
+                                                <span class="text-muted">개</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 d-flex">
+                                    <div class="card m-0">
+                                        <div class="card-body">
+                                            <h6>입고</h6>
+                                            <div class="cell">
+                                                <em>33</em>
+                                                <span class="text-muted">개</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 d-flex">
+                                    <div class="card m-0">
+                                        <div class="card-body">
+                                            <h6>출고</h6>
+                                            <div class="cell">
+                                                <em>14</em>
+                                                <span class="text-muted">개</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 d-flex">
+                                    <div class="card m-0">
+                                        <div class="card-body">
+                                            <h6>미완료 처리</h6>
+                                            <div class="cell">
+                                                <em>2</em>
+                                                <span class="text-muted">개</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sort-cover mb-3">
+                                <div class="set-date">
+                                    <span class="material-icons-outlined font-size-16pt">
+                                        date_range
+                                    </span>
+                                    <label class="">기간 설정</label>
+                                    <div class="flatpickr-wrapper">
+                                        <div id="recent_orders_date" data-toggle="flatpickr" data-flatpickr-wrap="true"
+                                            data-flatpickr-mode="range" data-flatpickr-alt-format="d/m/Y"
+                                            data-flatpickr-date-format="d/m/Y">
+                                            <a href="javascript:void(0)" class="btn-link" data-toggle>30/07/2021 to
+                                                01/07/2021</a>
+                                            <input class="flatpickr-hidden-input" type="hidden" value="30/07/2021 to 01/07/2021"
+                                                data-input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 d-flex">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>입고량 추이</h6>
+                                            <div class="graph-box">
+                                                여기 그래프
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>출고량 추이</h6>
+                                            <div class="graph-box">
+                                                여기 그래프
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 d-flex">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>제품별 재고</h6>
+                                            <div class="graph-box">
+                                                여기 그래프
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>재고 변동</h6>
+                                            <div class="graph-box">
+                                                여기 그래프
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resp-cover">
+                                <table class="table mb-4 table-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th>상품코드</th>
+                                            <th>상품명</th>
+                                            <th>최근 입고</th>
+                                            <th>최근 출고</th>
+                                            <th>총재고</th>
+                                            <th>입고작업중</th>
+                                            <th>출고가능</th>
+                                            <th>출고지시</th>
+                                            <th>출고작업중</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3" class="bg-light"></td>
+                                            <td class="font-weight-bolder bg-light">합계</td>
+                                            <td class="font-weight-bolder">1000</td>
+                                            <td class="font-weight-bolder">0</td>
+                                            <td class="font-weight-bolder">15</td>
+                                            <td class="font-weight-bolder">5</td>
+                                            <td class="font-weight-bolder">5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MT-0001</td>
+                                            <td>제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</td>
+                                            <td>2021-08-30</td>
+                                            <td>2021-08-30</td>
+                                            <td>1000</td>
+                                            <td>0</td>
+                                            <td>100</td>
+                                            <td>10</td>
+                                            <td>4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-distribution active" id="sm-distribution">
+                        <!-- 프로젝트 등록 -->
+                        <div class="distribution-inner">
+                            <div class="container-fluid py-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                        <!-- <a href="project_board.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a> -->
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">통계</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="board-title">
+                                    <p>discription</p>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <ul class="dot-list">
+                                    <li><a href="#n" class="active"><span></span> 전체</a></li>
+                                    <li><a href="#n" class=""><span></span> 창고1</a></li>
+                                    <li><a href="#n" class=""><span></span> 창고2</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

@@ -1,0 +1,354 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- history / live -->
+        <div class="btn-mid-holder">
+            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-white">
+                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
+                </label>
+                <label class="btn btn-white active">
+                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
+                </label>
+            </div>
+        </div>
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+            <div class="btn-group ml-2">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
+                        <ul class="item-list mb-2">
+                            <li><a href="#n" class="active"><i
+                                        class="material-icons">location_on</i><span>개별위치</span></a></li>
+                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
+                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
+                            <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="map-location ml-2">
+                <div class="location-header d-flex align-items-center">
+                    <strong>프로젝트 A</strong>
+                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location"
+                        href="#map-location">
+                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                    </a>
+                </div>
+                <div class="collapse location-body" id="map-location">
+                    <div class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01"
+                                    data-perfect-scrollbar>
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">4F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">5F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">6F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">7F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02"
+                                    data-perfect-scrollbar>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('./include/platform-tools.html')
+    </div>
+    <!-- <div class="navbar-toggler-box">
+        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+    </div> -->
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-assets active" id="sm-assets">
+                        <div class="assets-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex align-items-center">
+                                    <a href="assets_list_jekiss.html" class="pr-2"><i
+                                            class="material-icons">arrow_back</i></a>
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">자산명</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid contents-view">
+                                <div class="contents-tab the-num02 nav mb-4" role="tablist">
+                                    <a href="#assets-board-tab1" class="active" data-toggle="tab" role="tab"
+                                        aria-selected="true">
+                                        <span class="menu-active"><span>정보</span></span>
+                                    </a>
+                                    <a href="#assets-board-tab2" class="" data-toggle="tab" role="tab"
+                                        aria-selected="false">
+                                        <span class="menu-cover"><span>온/습도 현황</span></span>
+                                    </a>
+                                </div>
+                                <div class="tab-content">
+                                    <div id="assets-board-tab1" class="tab-pane active" role="tabpanel">
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventArea">자산명</label>
+                                            <p class="form-text">카운터 POS</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventArea">자산설명</label>
+                                            <p class="form-text">자산설명</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventArea">자산분류</label>
+                                            <p class="form-text">고정자산</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">위치</label>
+                                            <p class="form-text">매장A</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">태그연결</label>
+                                            <p class="form-text">매장A POS 태그</p>
+                                        </div>
+                                        <div class="form-group form-row">
+                                            <div class="col-md-6">
+                                                <label class="form-label mb-0 text-50">기준값</label>
+                                                <p class="form-text">이상</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label mb-0 text-50">최대수치</label>
+                                                <p class="form-text">30&#176;</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">타입</label>
+                                            <p class="form-text">태그</p>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">UUID</label>
+                                            <p class="form-text">KIR2394KFHF991</p>
+                                        </div>
+                                        
+
+                                        <div class="form-group form-row">
+                                            <div class="col-md-6">
+                                                <label class="form-label mb-0 text-50">위도</label>
+                                                <p class="form-text">33.2131231231</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label mb-0 text-50">경도</label>
+                                                <p class="form-text">33.2131231231</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="set-list pb-3 mb-3">
+                                                <label class="form-label mb-0" for="option01">사용 여부</label>
+                                                <div class="control-cover">
+                                                    <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                        <input checked="" type="checkbox" id="option03" class="custom-control-input" checked="checked"
+                                                            onclick="return false">
+                                                        <label class="custom-control-label" for="option03">active</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="set-list">
+                                                <label class="form-label mb-0" for="option01">지도 노출</label>
+                                                <div class="control-cover">
+                                                    <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                        <input checked="" type="checkbox" id="option03" class="custom-control-input" checked="checked"
+                                                            onclick="return false">
+                                                        <label class="custom-control-label" for="option03">active</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="my-32pt">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a href="assets_write.html"
+                                                    class="btn btn-outline-secondary mr-8pt">수정하기</a>
+                                                <a href="assets_list_jekiss.html" class="btn btn-accent ml-0">목록으로</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="assets-board-tab2" class="tab-pane" role="tabpanel">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="ml-auto">2021-08-30</span>
+                                        </div>
+                                        <table class="table mb-4 table-nowrap">
+                                            <colgroup>
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <col width="25%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>시간</th>
+                                                    <th>온도</th>
+                                                    <th>습도</th>
+                                                    <th>상태</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>14:00</td>
+                                                    <td>20&#8451;</td>
+                                                    <td>27%</td>
+                                                    <td>
+                                                        <span class="material-icons-outlined text-success">mood</span>
+                                                    </td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>13:00</td>
+                                                    <td><span class="text-danger">40&#8451;</span></td>
+                                                    <td>27%</td>
+                                                    <td>
+                                                        <span
+                                                            class="material-icons-outlined text-danger">mood_bad</span>
+                                                    </td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12:00</td>
+                                                    <td>20&#8451;</td>
+                                                    <td>27%</td>
+                                                    <td>
+                                                        <span class="material-icons-outlined text-success">mood</span>
+                                                    </td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11:00</td>
+                                                    <td>20&#8451;</td>
+                                                    <td>27%</td>
+                                                    <td>
+                                                        <span class="material-icons-outlined text-success">mood</span>
+                                                    </td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10:00</td>
+                                                    <td>20&#8451;</td>
+                                                    <td>27%</td>
+                                                    <td>
+                                                        <span class="material-icons-outlined text-success">mood</span>
+                                                    </td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>09:00</td>
+                                                    <td>20&#8451;</td>
+                                                    <td>27%</td>
+                                                    <td>
+                                                        <span class="material-icons-outlined text-success">mood</span>
+                                                    </td>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>08:00</td>
+                                                    <td>20&#8451;</td>
+                                                    <td>27%</td>
+                                                    <td>
+                                                        <span class="material-icons-outlined text-success">mood</span>
+                                                    </td>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

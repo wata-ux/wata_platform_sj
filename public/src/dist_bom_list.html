@@ -1,0 +1,339 @@
+@@include('./include/platform-header.html')
+
+<!-- Drawer Layout -->
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout float-contents">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <div class="cd-panel__open">
+            <a href="#n" class="js-cd-panel-trigger" data-panel="main">
+                <span class="material-icons-outlined">query_stats</span>
+                <small>Chart</small>
+            </a>
+        </div>
+        <div class="cd-panel cd-panel--from-right js-cd-panel-main cd-panel--is-visible">
+            <a href="#0" class="cd-panel__close js-cd-close">Close</a>
+
+            <div class="cd-panel__container">
+                <div class="cd-panel__content" data-perfect-scrollbar>
+                    <div class="d-flex flex-row align-items-center mb-0 p-4">
+                        <div class="flex">
+                            <h3 class="d-flex align-items-center mb-0">히스토리</h3>
+                            <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
+                        </div>
+                        <div class="flatpickr-wrapper d-none">
+                            <div id="recent_orders_date" data-toggle="flatpickr" data-flatpickr-wrap="true"
+                                data-flatpickr-mode="range" data-flatpickr-alt-format="d/m/Y"
+                                data-flatpickr-date-format="d/m/Y">
+                                <a href="javascript:void(0)" class="d-flex" data-toggle>
+                                    <span class="material-icons-outlined">edit_calendar</span>
+                                </a>
+                                <input class="flatpickr-hidden-input" type="hidden" value="01/01/2021 to 31/12/2021"
+                                    data-input>
+                            </div>
+                        </div>
+                    </div>
+                    <em class="none-list mb-4 d-none">히스토리가 없습니다.</em>
+                    <div class="accordion js-accordion list-group-flush" id="parent">
+                        <div class="accordion__item open">
+                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                data-target="#panel02" data-parent="#parent">
+                                <span class="flex d-flex align-items-center">
+                                    <!-- <span class="material-icons-outlined icon--left">watch_later</span> -->
+                                    현재 재고 및 내역
+                                </span>
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <div class="accordion__menu collapse show" id="panel02">
+                                <div class="accordion__menu-link align-items-center">
+                                    <div class="visitor-group">
+                                        <ul class="mb-0">
+                                            <li>재고<span class="text-accent">100</span></li>
+                                            <li>입고<span class="text-accent">100</span></li>
+                                            <li>출고<span class="text-primary">400</span></li>
+                                            <li>조정<span class="text-primary">400</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion__menu-link">
+                                    <div class="panel-list">
+                                        <a href="#n" class="d-flex align-items-start">
+                                            <!-- <div class="d-flex">
+                                                <i class="material-icons text-30">archive</i>
+                                            </div> -->
+                                            <div class="mr-3">
+                                                <h6><span
+                                                        class="material-icons font-size-16pt icon--left">arrow_downward</span>입고
+                                                    대기</h6>
+                                                <ul class="mb-2">
+                                                    <li>2021-08-23 15:29:04</li>
+                                                    <li>창고1</li>
+                                                </ul>
+                                                <span class="writer">leo jeong</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <h6>+5</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <div>15</div>
+                                                    <span
+                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
+                                                    <div>100</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="accordion__menu-link state-up">
+                                    <div class="panel-list">
+                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
+                                            <!-- <div class="d-flex">
+                                                <i class="material-icons text-30">archive</i>
+                                            </div> -->
+                                            <div class="mr-3">
+                                                <h6><span
+                                                        class="material-icons font-size-16pt icon--left">arrow_downward</span>입고
+                                                    완료</h6>
+                                                <ul class="mb-2">
+                                                    <li>2021-08-23 15:29:04</li>
+                                                    <li>창고1</li>
+                                                </ul>
+                                                <span class="writer">leo jeong</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <h6>+100</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <div>15</div>
+                                                    <span
+                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
+                                                    <div>100</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="accordion__menu-link state-down">
+                                    <div class="panel-list">
+                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
+                                            <div class="mr-3">
+                                                <h6><span
+                                                        class="material-icons font-size-16pt icon--left">arrow_upward</span>출고
+                                                    완료</h6>
+                                                <ul class="mb-2">
+                                                    <li>2021-08-23 15:29:04</li>
+                                                    <li>창고1</li>
+                                                </ul>
+                                                <span class="writer">leo jeong</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <h6>-5</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <div>15</div>
+                                                    <span
+                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
+                                                    <div>100</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="accordion__menu-link state-down">
+                                    <div class="panel-list">
+                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
+                                            <div class="mr-3">
+                                                <h6><span
+                                                        class="material-icons font-size-16pt icon--left">swap_vert</span>조정
+                                                    완료</h6>
+                                                <ul class="mb-2">
+                                                    <li>2021-08-23 15:29:04</li>
+                                                    <li>창고1</li>
+                                                </ul>
+                                                <span class="writer">leo jeong</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <h6>-23</h6>
+                                                <div class="d-flex align-items-center">
+                                                    <div>15</div>
+                                                    <span
+                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
+                                                    <div>100</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="sidebar-depth sidebar-float" data-perfect-scrollbar>
+            <div class="sidebar-depth-wrap">
+                <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
+                    <div class="flex title-row">
+                        <h3 class="d-flex align-items-center mb-0 ">BOM 상세보기</h3>
+                    </div>
+                    <div class="btn-group">
+                        <a href="#n" class="btn btn-rounded btn-outline-dark dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">더보기</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item text-primary" href="dist_pd_write.html"> 수정</a>
+                            <a class="dropdown-item text-danger" href="#"> 삭제</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-separator mt-5 mb-4">
+                    <div class="page-separator__text">BOM 정보</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label mb-0 text-50" for="">제목명</label>
+                            <input type="text" class="form-line" id="" placeholder="K7 방등 BOM">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="form-label mb-0 text-50" for="">생산제품</label>
+                            <input type="text" class="form-line" id="" placeholder="K7 방등 BOM">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-distribution active" id="sm-distribution">
+                        <!-- 프로젝트 등록 -->
+                        <div class="distribution-inner">
+                            <div class="container-fluid py-4">
+                                <div class="flex d-flex align-items-center">
+                                    <a href="dist_data_landing.html" class="circle-pin pr-2"><i
+                                            class="material-icons">arrow_back</i></a>
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">BOM 관리</h3>
+                                    </div>
+                                    <a href="#n" class="btn btn-outline-dark ml-auto">BOM 등록</a>
+                                </div>
+                            </div>
+                            <div class="list-opt-box">
+                                <div class="cell serach-box">
+                                    <input type="text" placeholder="제목 검색">
+                                    <a href="#n" class="btn btn-secondary btn-sm ml-auto">검색</a>
+                                </div>
+                                <div class="cell select-box">
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="전체">전체</option>
+                                        <option value="완제품">완제품</option>
+                                        <option value="자재">자재</option>
+                                        <option value="반제품">반제품</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <em class="none-list mb-4 d-none">등록한 제품이 없습니다.</em>
+                            <div class="list-group row-list list-group-flush mb-4">
+                                 <div class="list-group-item d-flex">
+                                    <a href="#n" class="flex d-flex flex-column">
+                                        <div class="d-flex flex align-items-center">
+                                            <h4 class="card-title">
+                                                K7 방등 BOM
+                                            </h4>
+                                            <span class="badge badge-type__ver">버전 1</span>
+                                        </div>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">k7 방등</small>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown py-3">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted py-3 px-2"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item text-primary">수정</a>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex">
+                                    <a href="#n" class="flex d-flex align-items-center">
+                                        <div class="flex list-els">
+                                            <h4 class="card-title">
+                                                K7 방등 BOM
+                                            </h4>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">k7 방등</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown py-3">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted py-3 px-2"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item text-primary">수정</a>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex">
+                                    <a href="#n" class="flex d-flex align-items-center">
+                                        <div class="flex list-els">
+                                            <h4 class="card-title">
+                                                K7 방등 BOM
+                                            </h4>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">k7 방등</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown py-3">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted py-3 px-2"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item text-primary">수정</a>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex">
+                                    <a href="#n" class="flex d-flex align-items-center">
+                                        <div class="flex list-els">
+                                            <h4 class="card-title">
+                                                K7 방등 BOM
+                                            </h4>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">k7 방등</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown py-3">
+                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted py-3 px-2"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item text-primary">수정</a>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade img-gallery" id="imgView" tabindex="-1" aria-labelledby="imgViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-gallery-container">
+        <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="material-icons">clear</i></span>
+        </button>
+        <div class="modal-img-container">
+            <img src="images/test_img_product11.jpg">
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')
