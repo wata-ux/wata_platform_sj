@@ -173,8 +173,10 @@ input::placeholder, textarea::placeholder{
         position: absolute;
         right: 0;
         bottom: 0;
-        padding: .5rem;
-        width: 3rem;
+        padding: .25rem;
+        span{
+            font-size: 36px;
+        }
         img{
             width: 100%;
         }
@@ -289,6 +291,26 @@ input::placeholder, textarea::placeholder{
         input{
             border: none;
             text-align: center;
+        }
+    }
+    .qr-thumb{
+        display: inline-flex;
+        span{
+            font-size: 36px;
+        }
+    }
+    td.set-area{
+        position: relative;
+        padding: 2rem 0 !important;
+        h6{
+            margin-left: 5.6%;
+        }
+        table.child-table{
+            width: 100%;
+            border: none;
+            td{
+                border: none;
+            }
         }
     }
 }
