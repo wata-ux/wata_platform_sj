@@ -212,6 +212,7 @@ input::placeholder, textarea::placeholder{
     border-bottom: 1px solid #384046;
     &:disabled{
         border-bottom: 1px solid rgba(56,64,70,0.3);
+        color: rgba(0,0,0,0.3);
     }
 }
 .form-none {
@@ -313,6 +314,17 @@ input::placeholder, textarea::placeholder{
             }
         }
     }
+    .bom-list{
+        display: inline-flex;
+        align-items: center;
+        padding: .5rem 1rem;
+        a{
+            text-decoration: underline;
+        }
+    }
+    td.set-buttons{
+        border-top: none;
+    }
 }
 .resp-cover{
     @media only screen and (max-width: 1440px){
@@ -321,6 +333,19 @@ input::placeholder, textarea::placeholder{
         white-space: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
+    }
+}
+.avatar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25rem;
+    &.avatar-icon{
+        background-color: var(--light);
+        border: 1px solid $border-color;
+        span{
+            color: rgba(0,0,0,0.2);
+        }
     }
 }
 .avatar-xxl{
@@ -467,7 +492,7 @@ ul.signin-help {
     font-size: .625rem;
     border: 1px solid #efac9d;
     border-radius: 50rem;
-    padding: 0 .5rem;
+    padding: .125rem .5rem;
     margin-left: .25rem;
     color: #efac9d;
     font-weight: bolder;
@@ -477,11 +502,41 @@ ul.signin-help {
     font-size: .625rem;
     border: 1px solid #bfbfbf;
     border-radius: 50rem;
-    padding: 0 .5rem;
+    padding: .125rem .5rem;
     margin-left: .25rem;
     color: #bfbfbf;
     font-weight: bolder;
     margin-left: .5rem;
+}
+.badge-lightgray, a.badge-lightgray{
+    font-size: .625rem;
+    border-radius: 50rem;
+    padding: .125rem .5rem;
+    margin-left: .25rem;
+    color: $identity;
+    font-weight: bolder;
+    margin-left: .5rem;
+    background-color: #EDF0F2;
+}
+.badge-darkgray{
+    font-size: .625rem;
+    border-radius: 50rem;
+    padding: .125rem .5rem;
+    margin-left: .25rem;
+    color: #fff;
+    font-weight: bolder;
+    margin-left: .5rem;
+    background-color: #777;
+}
+.badge-darkblue{
+    font-size: .625rem;
+    border-radius: 50rem;
+    padding: .125rem .5rem;
+    margin-left: .25rem;
+    color: #fff;
+    font-weight: bolder;
+    margin-left: .5rem;
+    background-color: #28509E;
 }
 .badge-mg{
     padding: 4px 8px;
@@ -652,6 +707,11 @@ ul.signin-help {
     .col-wide-10{
         width: 100%;
         max-width: 1000px;
+        margin: 1.75rem auto;
+    }
+    .col-wide-12{
+        width: 100%;
+        max-width: 1200px;
         margin: 1.75rem auto;
     }
     .col-wide-6{
@@ -3682,6 +3742,11 @@ a.btn-add-cat{
         position: absolute;
         top: .75rem;
         right: 3rem;
+    }
+    .accordion__menu-link{
+        &.active{
+            background-color: var(--light);
+        }
     }
 }
 .route-list{

@@ -404,7 +404,6 @@
                                 <a href="#n" class="qr-thumb" data-toggle="modal" data-target="#qrCodeModal">
                                     <span class="material-icons-outlined">qr_code_2</span>
                                 </a>
-                                </span>
                             </div>
                         </div>
                         <div class="col-4">
@@ -439,13 +438,15 @@
                         <colgroup>
                             <col width="5%">
                             <col width="*">
-                            <col width="10%">
-                            <col width="5%">
+                            <col width="">
+                            <col width="160px">
+                            <col width="100px">
                         </colgroup>
                         <thead>
                             <tr>
                                 <th class="text-center"></th>
                                 <th class="text-left">제품 정보</th>
+                                <th></th>
                                 <th class="text-center">수량</th>
                                 <th class="text-center">QR</th>
                             </tr>
@@ -470,7 +471,15 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="d-flex align-items-center">
+                                    <div class="d-flex justify-content-end">
+                                        <div class="bom-list">
+                                            <a href="#n" data-toggle="modal" data-target="#bomListModal">BOM 양식리스트명</a>
+                                            <span class="badge-darkgray">버전1</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="d-inline-flex align-items-center">
                                         <span class="d-flex align-items-center">
                                             <input type="number" class="form-control font-weight-bolder text-center" value="50" style="width: 6rem;"><span class="ml-2">EA</span>
                                         </span>
@@ -501,7 +510,15 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="d-flex align-items-center">
+                                    <div class="d-flex justify-content-end">
+                                        <div class="bom-list">
+                                            <a href="#n" data-toggle="modal" data-target="#bomListModal">BOM 양식리스트명</a>
+                                            <span class="badge-darkblue">임시</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="d-inline-flex align-items-center">
                                         <span class="d-flex align-items-center">
                                             <input type="number" class="form-control font-weight-bolder text-center" value="50" style="width: 6rem;"><span class="ml-2">EA</span>
                                         </span>
@@ -519,8 +536,8 @@
                                 </td>
                                 <td>
                                     <div class="flex d-flex align-items-center">
-                                        <a href="#n" class="avatar mr-12pt">
-                                            <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                        <a href="#n" class="avatar avatar-icon mr-12pt">
+                                            <span class="material-icons-outlined">inventory_2</span>
                                         </a>
                                         <div class="flex list-els">
                                             <h6 class="m-0">캐스팅</h6>
@@ -531,7 +548,9 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="d-flex align-items-center">
+                                </td>
+                                <td class="text-right">
+                                    <div class="d-inline-flex align-items-center">
                                         <span class="d-flex align-items-center">
                                             <input type="number" class="form-control font-weight-bolder text-center" value="50" style="width: 6rem;"><span class="ml-2">EA</span>
                                         </span>
@@ -544,14 +563,15 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="set-area">
+                                <td colspan="5" class="set-area">
                                     <h6>세트구성</h6>
                                     <table class="child-table m-0">
                                         <colgroup>
                                             <col width="5%">
                                             <col width="*">
-                                            <col width="10%">
-                                            <col width="5%">
+                                            <col width="">
+                                            <col width="160px">
+                                            <col width="100px">
                                         </colgroup>
                                         <tbody>
                                             <tr>
@@ -570,7 +590,8 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="text-center">8<span class="text-50 mr-4">(4)</span> EA</td>
+                                                <td></td>
+                                                <td class="text-right">8<span class="text-50 mr-3">(1SET : 4)</span> EA</td>
                                                 <td class="text-center">
                                                     <a href="#n" class="qr-thumb" data-toggle="modal" data-target="#qrCodeModal">
                                                         <span class="material-icons-outlined">qr_code_2</span>
@@ -593,7 +614,8 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="text-center">8<span class="text-50 mr-4">(4)</span> EA</td>
+                                                <td></td>
+                                                <td class="text-right">8<span class="text-50 mr-3">(1SET : 4)</span> EA</td>
                                                 <td class="text-center">
                                                     <a href="#n" class="qr-thumb" data-toggle="modal" data-target="#qrCodeModal">
                                                         <span class="material-icons-outlined">qr_code_2</span>
@@ -797,7 +819,7 @@
         <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
             <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
     <!-- Brand -->
-    <a href="dist_pd_graph.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+    <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
         data-title="대시보드로 이동" data-placement="right" data-boundary="window">
         <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
     </a>
@@ -978,36 +1000,460 @@
                 <div class="qr-cover">
                     <img src="images/qr_test.webp" class="img-qr-code" alt="">
                     <div class="d-flex flex-row align-items-center justify-content-center py-2 font-size-24pt font-weight-bolder">
-                        <span class="text-accent mr-2">7</span> / 100
+                        <span class="text-accent mr-2">32 </span> / 100
                     </div>
-                    <p class="text-50">QR 코드를 인쇄중입니다. 현재 페이지를 이탈하거나 브라우져를 닫으면 인쇄가 취소되오니 인쇄가 완료 될 때 까지 가다려주세요.</p>
+                    <p class="text-50">인쇄매수를 확인하세요.</p>
                     <!-- <p><a href="#n" class="btn btn-link text-accent">인쇄 대기</a></p>
                     <p><a href="#n" class="btn btn-link text-accent">인쇄 완료</a></p> -->
                 </div>
                 <table class="table mb-4 thead-bg-light">
+                    <colgroup>
+                        <col width="5%">
+                        <col width="*%">
+                        <col width="20%">
+                    </colgroup>
                     <thead>
                         <tr>
-                            <th>제품명</th>
-                            <th>입고일</th>
-                            <th>수량</th>
+                            <th>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-toggle-check-all"
+                                        data-target="#projects"
+                                        id="customCheckAll">
+                                    <label class="custom-control-label"
+                                        for="customCheckAll"><span class="text-hide">Toggle all</span></label>
+                                </div>
+                            </th>
+                            <th>리스트 정보</th>
+                            <th>인쇄매수</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="projects">
                         <tr>
-                            <td>제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</td>
-                            <td>2021-09-01</td>
-                            <td>100</td>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_1">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center">
+                                    <div class="flex list-els">
+                                        <h6 class="m-0">R20211130-00001</h6>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">릴리즈 코드</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_2">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_2"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center">
+                                    <a href="#n" class="avatar mr-12pt">
+                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                    </a>
+                                    <div class="flex list-els">
+                                        <h6 class="m-0">큐브다이아 사각방등 유리</h6>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재</small>
+                                            <small class="mr-2">유리 482*482</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_3">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_3"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center">
+                                    <a href="#n" class="avatar mr-12pt">
+                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                    </a>
+                                    <div class="flex list-els">
+                                        <h6 class="m-0">캐스팅 4인치</h6>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재</small>
+                                            <small class="mr-2">10W 주광</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>20</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal" disabled="">확인</button>
-                <!-- <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button> -->
+                <button type="button" class="btn btn-link btn-second-modal-close" data-dismiss="modal">취소</button>
+                <!-- <button type="button" class="btn btn-light" data-dismiss="modal" disabled="">인쇄</button> -->
+                <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="bomListModal" tabindex="-1" aria-labelledby="bomList" aria-hidden="true">
+    <div class="modal-dialog col-wide-12 modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bomList">BOM 정보</h5>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-row align-items-center bg-light py-3 px-4 border-top-1">
+                    <h6 class="m-0">슬림시스템 모던 욕실등</h6>
+                    <span class="badge-darkgray">버전 1</span>
+                </div>
+                <table class="table">
+                    <colgroup>
+                        <col width="5%">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center"></th>
+                            <th class="text-center">제품코드</th>
+                            <th class="text-center">제품명</th>
+                            <th class="text-center">규격명</th>
+                            <th class="text-center">수량</th>
+                            <th class="text-center">제조사(생산자)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <a href="#n" class="text-accent"><span class="material-icons">remove_circle</span></a>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="ACDCOA1W">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="큐브다이아 거실 1등 유리">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="유리 482*482" >
+                            </td>
+                            <td>
+                                <input type="number" class="form-control text-center" value="1">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="라이언일렉트릭">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="#n" class="text-accent"><span class="material-icons">remove_circle</span></a>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="ACDCOA1W">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="큐브다이아 거실 1등 유리">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="유리 482*482">
+                            </td>
+                            <td>
+                                <input type="number" class="form-control text-center" value="1">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="라이언일렉트릭">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="#n" class="text-accent"><span class="material-icons">remove_circle</span></a>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="ACDCOA1W">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="큐브다이아 거실 1등 유리">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="유리 482*482">
+                            </td>
+                            <td>
+                                <input type="number" class="form-control text-center" value="1">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" value="라이언일렉트릭">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="#n" class="text-dark"><span class="material-icons">add_circle</span></a>
+                            </td>
+                            <td colspan="5">
+                                <div class="d-flex justify-content-center">
+                                    <a href="#n" class="btn text-accent btn-second-modal within-first-modal" data-toggle="modal" data-target="#addMaterialsModal">
+                                        <span class="material-icons mr-1">add</span>
+                                        자재 추가
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link mr-auto" data-dismiss="modal">삭제</button>
+                <button type="button" class="btn btn-link" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addMaterialsModal" tabindex="-1" aria-labelledby="addMaterials" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered col-wide-10">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addMaterials">자재 추가</h5>
+            </div>
+            <div class="modal-body p-0">
+                <div class="half-container">
+                    <div class="half half-left" data-perfect-scrollbar>
+                        <div class="list-opt-box">
+                            <div class="cell serach-box">
+                                <input type="text" placeholder="자재 검색">
+                                <a href="#n" class="btn btn-secondary btn-sm ml-auto">검색</a>
+                            </div>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt">
+                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                    </div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">큐브다이아 사각방등 유리</h4>
+                                        <div class="card-subtitle text-50 d-flex align-items-center">
+                                            <small class="mr-2">자재 / 유리 482*482</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt">
+                                        <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
+                                    </div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">캐스팅 4인치</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 10W 주광</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt blank-img"></div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">캐스팅 5인치</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 12W 주광</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt blank-img"></div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">자재 리스트</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 유리 482*482</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt blank-img"></div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">자재 리스트</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 유리 482*482</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt blank-img"></div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">자재 리스트</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 유리 482*482</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt blank-img"></div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">자재 리스트</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 유리 482*482</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt blank-img"></div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">자재 리스트</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 유리 482*482</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt blank-img"></div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">자재 리스트</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 유리 482*482</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="half half-right" data-perfect-scrollbar>
+                        <div class="title-box">자재 <strong class="text-accent">3</strong>개</div>
+                        <!-- 빈 공간 -->
+                        <div class="text-holder d-none">
+                            <em>자재를 선택해주세요</em>
+                        </div>
+                        <!-- 제품 선택시 -->
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="text-accent d-flex align-items-center pr-3"><span class="material-icons">remove_circle</span></a>
+                                <div class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt">
+                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                    </div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">큐브다이아 사각방등 유리</h4>
+                                        <div class="card-subtitle text-50 d-flex align-items-center">
+                                            <small class="mr-2">자재 / 유리 482*482</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                        <span>+50</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="text-accent d-flex align-items-center pr-3"><span class="material-icons">remove_circle</span></a>
+                                <div href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt">
+                                        <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
+                                    </div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">캐스팅 4인치</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 10W 주광</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                        <span>+25</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="text-accent d-flex align-items-center pr-3"><span class="material-icons">remove_circle</span></a>
+                                <div href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt blank-img"></div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">캐스팅 5인치</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 12W 주광</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link btn-second-modal-close" data-dismiss="modal">취소</button>
+                <!-- <button type="button" class="btn btn-light" data-dismiss="modal" disabled="">확인</button> -->
+                <button type="button" class="btn btn-accent btn-second-modal-close" data-dismiss="modal">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <!-- alert -->
     <div class="map-alert-container d-none"> 
         <div class="map-alert alert bg-accent text-white fade" role="alert">

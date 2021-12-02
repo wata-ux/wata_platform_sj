@@ -3,209 +3,27 @@
 <div class="mdk-drawer-layout js-mdk-drawer-layout float-contents">
     @@include('./include/platform-topbar.html')
     <div class="mdk-drawer-layout__content page-content">
-        <div class="cd-panel cd-panel--from-right js-cd-panel-main cd-panel--is-visible">
-            <a href="#0" class="cd-panel__close js-cd-close">Close</a>
-            <div class="cd-panel__container">
-                <div class="cd-panel__content p-4" data-perfect-scrollbar>
-                    <div class="d-flex flex-row align-items-center mb-0 pb-4">
-                        <div class="flex">
-                            <h3 class="d-flex align-items-center mb-0">히스토리</h3>
-                            <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
-                        </div>
-                        <div class="flatpickr-wrapper d-none">
-                            <div id="recent_orders_date" data-toggle="flatpickr" data-flatpickr-wrap="true"
-                                data-flatpickr-mode="range" data-flatpickr-alt-format="d/m/Y"
-                                data-flatpickr-date-format="d/m/Y">
-                                <a href="javascript:void(0)" class="d-flex" data-toggle>
-                                    <span class="material-icons-outlined">edit_calendar</span>
-                                </a>
-                                <input class="flatpickr-hidden-input" type="hidden" value="01/01/2021 to 31/12/2021"
-                                    data-input>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="btn-group mb-3 w-100">
-                        <a href="dist_pd_warehousing.html" class="btn btn-outline-secondary">입고</a>
-                        <a href="dist_pd_release.html" class="btn btn-outline-secondary">출고</a>
-                        <a href="dist_pd_adjust.html" class="btn btn-outline-secondary">조정</a>
-                        <a href="dist_pd_move.html" class="btn btn-outline-secondary">이동</a>
-                    </div>
-                    <div class="accordion js-accordion accordion--boxed list-group-flush" id="parent">
-                        <div class="accordion__item open">
-                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
-                                data-target="#panel02" data-parent="#parent">
-                                <span class="flex d-flex align-items-center">
-                                    <!-- <span class="material-icons-outlined icon--left">watch_later</span> -->
-                                    현재 재고 및 내역
-                                </span>
-                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                            </a>
-                            <div class="accordion__menu collapse show" id="panel02">
-                                <div class="accordion__menu-link align-items-center">
-                                    <em class="flex text-dark font-size-24pt">2,354</em>
-                                    <div class="visitor-group">
-                                        <ul class="mb-0">
-                                            <li>입고<span class="text-accent">100</span></li>
-                                            <li>출고<span class="text-primary">400</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="accordion__menu-link">
-                                    <div class="panel-list">
-                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
-                                            <!-- <div class="d-flex">
-                                                <i class="material-icons text-30">archive</i>
-                                            </div> -->
-                                            <div class="mr-3">
-                                                <h6>
-                                                    <span class="material-icons font-size-16pt icon--left">arrow_downward</span>입고 대기
-                                                    <!-- <span class="badge-pich">인쇄중</span> -->
-                                                </h6>
-                                                <div class="text-els">제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</div>
-                                                <ul class="mb-2">
-                                                    <li>2021-08-23 13:10:45</li>
-                                                    <li>창고1</li>
-                                                </ul>
-                                                <span class="writer">leo jeong</span>
-                                            </div>
-                                            <div class="quantity">
-                                                <h6>+5</h6>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="accordion__menu-link">
-                                    <div class="panel-list">
-                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
-                                            <!-- <div class="d-flex">
-                                                <i class="material-icons text-30">archive</i>
-                                            </div> -->
-                                            <div class="mr-3">
-                                                <h6>
-                                                    <span class="material-icons font-size-16pt icon--left">arrow_downward</span>입고 대기
-                                                </h6>
-                                                <div class="text-els">제주 한라봉 수제 쿠키(16개입)</div>
-                                                <ul class="mb-2">
-                                                    <li>2021-08-23 15:29:04</li>
-                                                    <li>창고1</li>
-                                                </ul>
-                                                <span class="writer">leo jeong</span>
-                                            </div>
-                                            <div class="quantity">
-                                                <h6>+50</h6>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="accordion__menu-link state-up">
-                                    <div class="panel-list">
-                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
-                                            <!-- <div class="d-flex">
-                                                <i class="material-icons text-30">archive</i>
-                                            </div> -->
-                                            <div class="mr-3">
-                                                <h6><span
-                                                        class="material-icons font-size-16pt icon--left">arrow_downward</span>입고
-                                                    완료</h6>
-                                                <div class="text-els">제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</div>
-                                                <ul class="mb-2">
-                                                    <li>2021-08-23 08:50:12</li>
-                                                    <li>창고1</li>
-                                                </ul>
-                                                <span class="writer">leo jeong</span>
-                                            </div>
-                                            <div class="quantity">
-                                                <h6>+100</h6>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="accordion__menu-link state-down">
-                                    <div class="panel-list">
-                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
-                                            <div class="mr-3">
-                                                <h6><span
-                                                        class="material-icons font-size-16pt icon--left">arrow_upward</span>출고
-                                                    완료</h6>
-                                                <div class="text-els">제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</div>
-                                                <ul class="mb-2">
-                                                    <li>2021-08-23 17:06:23</li>
-                                                    <li>창고1</li>
-                                                </ul>
-                                                <span class="writer">leo jeong</span>
-                                            </div>
-                                            <div class="quantity">
-                                                <h6>-5</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <div>15</div>
-                                                    <span
-                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                    <div>100</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="accordion__menu-link state-down">
-                                    <div class="panel-list">
-                                        <a href="dist_pd_history.html" class="d-flex align-items-start">
-                                            <div class="mr-3">
-                                                <h6><span
-                                                        class="material-icons font-size-16pt icon--left">swap_vert</span>조정
-                                                    완료</h6>
-                                                <div class="text-els">제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</div>
-                                                <ul class="mb-2">
-                                                    <li>2021-08-23 15:29:04</li>
-                                                    <li>창고1</li>
-                                                </ul>
-                                                <span class="writer">leo jeong</span>
-                                            </div>
-                                            <div class="quantity">
-                                                <h6>-23</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <div>15</div>
-                                                    <span
-                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                    <div>100</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- cd-panel__content -->
-            </div> <!-- cd-panel__container -->
-        </div> <!-- cd-panel -->
-        <!-- // END drawer -->
-        <div class="sidebar-depth sidebar-float" data-perfect-scrollbar>
+        <div class="sidebar-depth" data-perfect-scrollbar>
             <div class="sidebar-depth-wrap">
                 <div class="mb-5">
                     <div class="d-flex align-items-center mb-24pt">
                         <div class="flex title-row">
                             <h3 class="d-flex align-items-center mb-0 ">상세 내역</h3>
                         </div>
-                        <div class="media flex-nowrap align-items-center">
-                            <span class="avatar avatar-sm mr-2">
-                                <span class="avatar-title rounded-circle">JY</span>
-                            </span>
-                            <div class="media-body mr-4">
-                                <strong class="text-dark">Jaeyong Lee</strong>
-                            </div>
-                        </div>
-                        <a href="#n" class="btn btn-rounded btn-outline-accent mr-2">
-                            <i class="material-icons icon--left">arrow_downward</i>입고완료
-                        </a>
-                        <a href="#n" class="btn btn-rounded btn-outline-dark mr-2" data-toggle="modal" data-target="#qrCodeModal">
-                            <i class="material-icons icon--left">qr_code</i>QR 인쇄
-                        </a>
-                        <div class="btn-group">
-                            <a href="#n" class="btn btn-rounded btn-outline-dark dropdown-toggle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">더보기</a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item text-primary" href="#"> 수정</a>
-                                <a class="dropdown-item text-accent" href="#"> 삭제</a>
+                        <div class="d-flex ml-auto">
+                            <a href="#n" class="btn btn-rounded btn-outline-accent mr-2">
+                                <i class="material-icons icon--left">arrow_downward</i>입고완료
+                            </a>
+                            <a href="#n" class="btn btn-rounded btn-outline-dark mr-2" data-toggle="modal" data-target="#qrCodeModal">
+                                <i class="material-icons icon--left">qr_code</i>QR 인쇄
+                            </a>
+                            <div class="btn-group">
+                                <a href="#n" class="btn btn-rounded btn-outline-dark dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">더보기</a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item text-primary" href="#"> 수정</a>
+                                    <a class="dropdown-item text-accent" href="#"> 삭제</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -215,81 +33,106 @@
                     <div class="page-separator mt-5">
                         <div class="page-separator__text">입고 정보</div>
                     </div>
-                    <table class="table mb-4 table-nowrap thead-bg-light">
-                        <thead>
-                            <tr>
-                                <th>입고일</th>
-                                <th>창고 위치</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <input id="dateRangePickerSample02" type="text"
-                                        class="form-control font-weight-bolder d-inline-flex"
-                                        placeholder="입고날짜를 입력해주세요." data-toggle="daterangepicker"
-                                        data-daterangepicker-drops="up" data-daterangepicker-single-date-picker="true"
-                                        style="width:10rem;" disabled>
-                                </td>
-                                <td>
-                                    <select name="category"
-                                        class="form-control custom-select font-weight-bolder d-inline-flex w-auto" disabled>
-                                        <option value="창고1" selected>창고1</option>
-                                        <option value="창고2">창고2</option>
-                                        <option value="창고3">창고3</option>
-                                        <option value="창고4">창고4</option>
-                                        <option value="창고5">창고5</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="page-separator mt-5">
-                        <div class="page-separator__text">제품 정보</div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label class="form-label mb-2 text-50" for="">입고지시</label>
+                                <input type="text" class="form-line" id="" value="2021-11-25 09:00:00" disabled>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label class="form-label mb-2 text-50" for="">입고완료</label>
+                                <input type="text" class="form-line" id="" value="" disabled>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label class="form-label mb-2 text-50" for="">처리자</label>
+                                <input type="text" class="form-line" id="" value="" disabled>
+                            </div>
+                        </div>
                     </div>
-                    <table class="table mb-4 table-nowrap thead-bg-light">
+
+                    <div class="page-separator mt-5">
+                        <div class="page-separator__text">릴리즈 코드</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label class="form-label mb-2 text-50" for="">코드번호</label>
+                                <input type="text" class="form-line pr-5" id="" value="R202111225-00001" placeholder="코드번호를 입력해주세요.">
+                                <a href="#n" class="qr-thumb" data-toggle="modal" data-target="#qrCodeModal">
+                                    <span class="material-icons-outlined">qr_code_2</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label class="form-label mb-2 text-50" for="">납품처</label>
+                                <select name="" class="form-line">
+                                    <option value="">삼진조명</option>
+                                    <option value="">남품처1</option>
+                                    <option value="">남품처2</option>
+                                    <option value="">남품처3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label class="form-label mb-2 text-50" for="">창고위치</label>
+                                <select name="" class="form-line">
+                                    <option value="">제1물류창고</option>
+                                    <option value="">제2물류창고</option>
+                                    <option value="">제3물류창고</option>
+                                    <option value="">제4물류창고</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-separator mt-5">
+                        <div class="page-separator__text">입고 제품</div>
+                    </div>
+
+                    <table class="table mb-4 thead-bg-light">
                         <colgroup>
                             <col width="*">
-                            <col width="15%">
+                            <col width="100px">
+                            <col width="100px">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th>제품 정보</th>
-                                <th>박스 수량</th>
+                                <th class="text-left">제품 정보</th>
+                                <th class="text-center">수량</th>
+                                <th class="text-center">QR</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    <div class="flex d-flex align-items-center mr-16pt">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <h6 class="m-0">제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</h6>
-                                                <div class="card-subtitle text-50">
-                                                    <small class="mr-2">특대</small>
-                                                    <small class="mr-2">300g x 15</small>
-                                                </div>
+                                    <div class="flex d-flex align-items-center">
+                                        <a href="#n" class="avatar mr-12pt">
+                                            <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                        </a>
+                                        <div class="flex list-els">
+                                            <h6 class="m-0">큐브다이아 사각방등 유리</h6>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">자재</small>
+                                                <small class="mr-2">유리 482*482</small>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                <td>
-                                    <div class="d-inline-flex align-items-center">
-                                        <input type="number" class="form-control font-weight-bolder" style="width:6rem;" value="5" disabled>
-                                        <span class="ml-2 text-50">Box</span>
-                                    </div>
+                                <td class="text-center">1 EA</td>
+                                <td class="text-center">
+                                    <a href="#n" class="qr-thumb" data-toggle="modal" data-target="#qrCodeModal">
+                                        <span class="material-icons-outlined">qr_code_2</span>
+                                    </a>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="my-32pt">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <a href="event_done.html" class="btn btn-outline-accent btn-rounded ml-0">수정하기</a>
-                        </div>
-                    </div>
 
                     <div class="page-separator mt-5">
                         <div class="page-separator__text">수정 전 내역</div>
@@ -470,274 +313,6 @@
                         </div>
                     </div>
 
-
-
-                    <!-- 이동 -->
-                    <!-- <div class="d-flex align-items-center mb-2">
-                        <span class="d-flex font-size-16pt font-weight-bolder">창고1</span>
-                        <span class="material-icons text-30 px-2 font-size-16pt">arrow_forward</span>
-                        <span class="d-flex font-size-16pt font-weight-bolder">창고2</span>
-                        <div class="ml-auto">
-                            <span class="text-50">2021-08-25</span>
-                        </div>
-                    </div>
-                    <table class="table mb-4 table-nowrap">
-                        <colgroup>
-                            <col width="60%">
-                            <col width="15%">
-                            <col width="15%">
-                            <col width="10%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>제품정보</th>
-                                <th>이전 위치</th>
-                                <th>새 위치</th>
-                                <th>수량</th>
-                            </tr>
-                        </thead>
-                        <tbody class="list" id="projects">
-                            <tr>
-                                <td>
-                                    <div class="flex d-flex align-items-center mr-16pt">
-                                        <div class="avatar mr-12pt blank-img">
-                                            <a href="#n" class="btn-img" data-toggle="modal" data-target="#imgView">
-                                                <img src="images/test_img_product11.jpg" alt=""
-                                                    class="avatar-img rounded">
-                                            </a>
-                                        </div>
-                                        <div class="flex list-els">
-                                            <a class="card-title" href="#n">제품1</a>
-                                            <div class="card-subtitle text-50">2063566906443</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="d-flex font-size-16pt font-weight-bolder">100</span>
-                                        <span class="material-icons text-30 px-2 font-size-16pt">arrow_forward</span>
-                                        <span class="d-flex font-size-16pt font-weight-bolder">50</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="d-flex font-size-16pt font-weight-bolder">4</span>
-                                        <span class="material-icons text-30 px-2 font-size-16pt">arrow_forward</span>
-                                        <span class="d-flex font-size-16pt font-weight-bolder">54</span>
-                                    </div>
-                                </td>
-                                <td><span class="text-success font-size-16pt font-weight-bolder">50</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table class="table mb-4 table-nowrap">
-                        <thead>
-                            <tr>
-                                <th>상품코드</th>
-                                <th>상품명</th>
-                                <th>최근 입고</th>
-                                <th>최근 출고</th>
-                                <th>총재고</th>
-                                <th>입고작업중</th>
-                                <th>출고가능</th>
-                                <th>출고지시</th>
-                                <th>출고작업중</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="3" class="bg-light"></td>
-                                <td class="font-weight-bolder bg-light">합계</td>
-                                <td class="font-weight-bolder">1000</td>
-                                <td class="font-weight-bolder">0</td>
-                                <td class="font-weight-bolder">15</td>
-                                <td class="font-weight-bolder">5</td>
-                                <td class="font-weight-bolder">5</td>
-                            </tr>
-                            <tr>
-                                <td>MT-0001</td>
-                                <td>제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</td>
-                                <td>2021-08-30</td>
-                                <td>2021-08-30</td>
-                                <td>1000</td>
-                                <td>0</td>
-                                <td>100</td>
-                                <td>10</td>
-                                <td>4</td>
-                            </tr>
-                        </tbody>
-                    </table> -->
-
-                    <!-- 조정 -->
-                    <!-- <div class="d-flex align-items-center mb-2">
-                        <span class="d-flex font-size-16pt font-weight-bolder">창고1</span>
-                        <div class="ml-auto">
-                            <span class="text-50">2021-08-25</span>
-                        </div>
-                    </div>
-                    <table class="table mb-4 table-nowrap">
-                        <colgroup>
-                            <col width="75%">
-                            <col width="15%">
-                            <col width="10%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>제품정보</th>
-                                <th>재고 변동</th>
-                                <th>수량</th>
-                            </tr>
-                        </thead>
-                        <tbody class="list" id="projects">
-                            <tr>
-                                <td>
-                                    <div class="flex d-flex align-items-center mr-16pt">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/test_img_product11.jpg" alt=""
-                                                    class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">제품1</a>
-                                                <div class="card-subtitle text-50">2063566906443</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="d-flex font-size-16pt font-weight-bolder">90</span>
-                                        <span class="material-icons text-30 px-2 font-size-16pt">arrow_forward</span>
-                                        <span class="d-flex font-size-16pt font-weight-bolder">40</span>
-                                    </div>
-                                </td>
-                                <td><span class="text-primary font-size-16pt font-weight-bolder">-50</span></td>
-                            </tr>
-                        </tbody>
-                    </table> -->
-
-                    <!-- 입고 -->
-                    <!-- <div class="d-flex align-items-center mb-2">
-                        <span class="d-flex font-size-16pt font-weight-bolder">창고1</span>
-                        <div class="ml-auto">
-                            <span class="text-50">2021-08-25</span>
-                        </div>
-                    </div>
-                    <table class="table mb-4 table-nowrap">
-                        <colgroup>
-                            <col width="75%">
-                            <col width="15%">
-                            <col width="10%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>제품정보</th>
-                                <th>재고 변동</th>
-                                <th>수량</th>
-                            </tr>
-                        </thead>
-                        <tbody class="list" id="projects">
-                            <tr>
-                                <td>
-                                    <div class="flex d-flex align-items-center mr-16pt">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/test_img_product11.jpg" alt=""
-                                                    class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">제품1</a>
-                                                <div class="card-subtitle text-50">2063566906443</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="d-flex font-size-16pt font-weight-bolder">90</span>
-                                        <span class="material-icons text-30 px-2 font-size-16pt">arrow_forward</span>
-                                        <span class="d-flex font-size-16pt font-weight-bolder">150</span>
-                                    </div>
-                                </td>
-                                <td><span class="text-accent font-size-16pt font-weight-bolder">+60</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="flex d-flex align-items-center mr-16pt">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/test_img_product12.jpg" alt=""
-                                                    class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">제품2</a>
-                                                <div class="card-subtitle text-50">2063566906443</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="d-flex font-size-16pt font-weight-bolder">0</span>
-                                        <span class="material-icons text-30 px-2 font-size-16pt">arrow_forward</span>
-                                        <span class="d-flex font-size-16pt font-weight-bolder">3</span>
-                                    </div>
-                                </td>
-                                <td><span class="text-accent font-size-16pt font-weight-bolder">+3</span></td>
-                            </tr>
-                        </tbody>
-                    </table> -->
-
-                    <!-- 출고 -->
-                    <!-- <div class="d-flex align-items-center mb-2">
-                        <span class="d-flex font-size-16pt font-weight-bolder">창고1</span>
-                        <div class="ml-auto">
-                            <span class="text-50">삼성</span>
-                            <span class="text-50 ml-3">2021-08-25</span>
-                        </div>
-                    </div>
-                    <table class="table mb-4 table-nowrap">
-                        <colgroup>
-                            <col width="75%">
-                            <col width="15%">
-                            <col width="10%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>제품정보</th>
-                                <th>재고 변동</th>
-                                <th>수량</th>
-                            </tr>
-                        </thead>
-                        <tbody class="list" id="projects">
-                            <tr>
-                                <td>
-                                    <div class="flex d-flex align-items-center mr-16pt">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="#n" class="avatar mr-12pt">
-                                                <img src="images/test_img_product11.jpg" alt=""
-                                                    class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">제품1</a>
-                                                <div class="card-subtitle text-50">2063566906443</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="d-flex font-size-16pt font-weight-bolder">104</span>
-                                        <span class="material-icons text-30 px-2 font-size-16pt">arrow_forward</span>
-                                        <span class="d-flex font-size-16pt font-weight-bolder">94</span>
-                                    </div>
-                                </td>
-                                <td><span class="text-primary font-size-16pt font-weight-bolder">-10</span></td>
-                            </tr>
-                        </tbody>
-                    </table> -->
-
                 </div>
             </div>
         </div>
@@ -757,42 +332,10 @@
                                     <div class="mr-24pt">
                                         <h3 class="mb-0">히스토리</h3>
                                     </div>
-                                    <a href="#layerPopup" class="btn btn-outline-dark ml-auto btn_layerpopup px-2 py-1"
-                                        data-toggle="tooltip" data-title="필터설정" data-placement="left"
-                                        data-boundary="window">
-                                        <span class="material-icons font-size-16pt">tune</span>
-                                    </a>
                                 </div>
                             </div>
                             <div class="cd-panel__content">
-                                <div class="sort-box">
-                                    <div class="badge-border">
-                                        <a href="#n" class="badge-btn-value">2021-08-25 ~ 2021-08-30</a>
-                                        <a href="#n" class="badge-btn-del"><span
-                                                class="material-icons font-size-12pt">close</span></a>
-                                    </div>
-                                    <div class="badge-border">
-                                        <a href="#n" class="badge-btn-value">입고</a>
-                                        <a href="#n" class="badge-btn-del"><span
-                                                class="material-icons font-size-12pt">close</span></a>
-                                    </div>
-                                    <div class="badge-border">
-                                        <a href="#n" class="badge-btn-value">창고1</a>
-                                        <a href="#n" class="badge-btn-del"><span
-                                                class="material-icons font-size-12pt">close</span></a>
-                                    </div>
-                                    <div class="badge-border">
-                                        <a href="#n" class="badge-btn-value">삼성</a>
-                                        <a href="#n" class="badge-btn-del"><span
-                                                class="material-icons font-size-12pt">close</span></a>
-                                    </div>
-                                    <div class="badge-border">
-                                        <a href="#n" class="badge-btn-value">leo.jeong</a>
-                                        <a href="#n" class="badge-btn-del"><span
-                                                class="material-icons font-size-12pt">close</span></a>
-                                    </div>
-                                </div>
-                                <div class="accordion list-group-flush accordion-line">
+                                <div class="accordion list-group-flush border-top-1">
                                     <div class="accordion__item">
                                         <div class="accordion__menu collapse show">
                                             <div class="accordion__menu-link">
@@ -921,69 +464,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="layer-popup" id="layerPopup">
-                                <div class="container-fluid py-4">
-                                    <div class="flex d-flex align-items-center">
-                                        <div class="mr-24pt">
-                                            <h3 class="mb-0">필터설정</h3>
-                                        </div>
-                                        <a href="#n"
-                                            class="btn btn-outline-dark ml-auto btn_layerpopup px-2 py-1 btn_close_layer">
-                                            <span class="material-icons font-size-16pt">close</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="container-fluid" data-perfect-scrollbar>
-                                    <div class="form-group mb-32pt">
-                                        <label class="form-label text-50 essential">기간</label>
-                                        <input id="flatpickrSample02" type="hidden"
-                                            class="form-control flatpickr-input form-line" data-toggle="flatpickr"
-                                            data-flatpickr-mode="range" value="2018-10-07 to 2018-10-15">
-                                    </div>
-                                    <div class="form-group mb-32pt">
-                                        <label class="form-label text-50 essential">입/출고</label>
-                                        <select name="" class="form-line">
-                                            <option value="전체">전체</option>
-                                            <option value="입고">입고</option>
-                                            <option value="출고">출고</option>
-                                            <option value="조정">조정</option>
-                                            <option value="이동">이동</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group mb-32pt">
-                                        <label class="form-label text-50 essential">위치</label>
-                                        <select name="" class="form-line">
-                                            <option value="전체">전체</option>
-                                            <option value="창고1">창고1</option>
-                                            <option value="창고2">창고2</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group mb-32pt">
-                                        <label class="form-label text-50 essential">거래처</label>
-                                        <select name="" class="form-line">
-                                            <option value="전체">전체</option>
-                                            <option value="삼성">삼성</option>
-                                            <option value="애플">애플</option>
-                                            <option value="테슬라">테슬라</option>
-                                            <option value="LG">LG</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group mb-32pt">
-                                        <label class="form-label text-50 essential">멤버</label>
-                                        <select name="" class="form-line">
-                                            <option value="전체">전체</option>
-                                            <option value="멤버A">멤버A</option>
-                                            <option value="멤버B">멤버B</option>
-                                            <option value="멤버C">멤버C</option>
-                                        </select>
-                                    </div>
-                                    <div class="my-32pt">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a href="#n" class="btn btn-accent ml-0">적용하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1010,56 +490,124 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="qrCode">QR 인쇄</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
-                </button>
             </div>
             <div class="modal-body">
                 <div class="qr-cover">
                     <img src="images/qr_test.webp" class="img-qr-code" alt="">
                     <div class="d-flex flex-row align-items-center justify-content-center py-2 font-size-24pt font-weight-bolder">
-                        <input type="number" class="form-control font-size-24pt text-accent font-weight-bolder mr-2" style="width: 7rem;"> / 100
+                        <span class="text-accent mr-2">32 </span> / 100
                     </div>
+                    <p class="text-50">인쇄매수를 확인하세요.</p>
+                    <!-- <p><a href="#n" class="btn btn-link text-accent">인쇄 대기</a></p>
+                    <p><a href="#n" class="btn btn-link text-accent">인쇄 완료</a></p> -->
                 </div>
                 <table class="table mb-4 thead-bg-light">
+                    <colgroup>
+                        <col width="5%">
+                        <col width="*%">
+                        <col width="20%">
+                    </colgroup>
                     <thead>
                         <tr>
-                            <th>인쇄 날짜</th>
-                            <th>인쇄 매수</th>
-                            <th></th>
+                            <th>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-toggle-check-all"
+                                        data-target="#projects"
+                                        id="customCheckAll">
+                                    <label class="custom-control-label"
+                                        for="customCheckAll"><span class="text-hide">Toggle all</span></label>
+                                </div>
+                            </th>
+                            <th>리스트 정보</th>
+                            <th>인쇄매수</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="text-50">
-                            <td>2021-09-06 16:20:12</td>
-                            <td>100/100</td>
-                            <td class="text-center">인쇄 완료</td>
+                    <tbody id="projects">
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_1">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center">
+                                    <div class="flex list-els">
+                                        <h6 class="m-0">R20211130-00001</h6>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">릴리즈 코드</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>1</td>
                         </tr>
-                        <tr class="text-50">
-                            <td>2021-09-05 17:55:12</td>
-                            <td>100/100</td>
-                            <td class="text-center">인쇄 완료</td>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_2">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_2"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center">
+                                    <a href="#n" class="avatar mr-12pt">
+                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                    </a>
+                                    <div class="flex list-els">
+                                        <h6 class="m-0">큐브다이아 사각방등 유리</h6>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재</small>
+                                            <small class="mr-2">유리 482*482</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>50</td>
                         </tr>
-                        <tr class="text-50">
-                            <td>2021-09-04 18:03:12</td>
-                            <td>100/100</td>
-                            <td class="text-center">인쇄 완료</td>
-                        </tr>
-                        <tr class="text-50">
-                            <td>2021-09-03 17:48:12</td>
-                            <td>100/100</td>
-                            <td class="text-center">인쇄 완료</td>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_3">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_3"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center">
+                                    <a href="#n" class="avatar mr-12pt">
+                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                    </a>
+                                    <div class="flex list-els">
+                                        <h6 class="m-0">캐스팅 4인치</h6>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재</small>
+                                            <small class="mr-2">10W 주광</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>20</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-link" data-dismiss="modal">QR 재인쇄</button>
+                <button type="button" class="btn btn-link btn-second-modal-close" data-dismiss="modal">취소</button>
+                <!-- <button type="button" class="btn btn-light" data-dismiss="modal" disabled="">인쇄</button> -->
                 <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
             </div>
         </div>
     </div>
 </div>
-
 
 @@include('./include/platform-footer.html')
