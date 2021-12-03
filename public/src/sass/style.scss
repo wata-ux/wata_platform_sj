@@ -517,6 +517,9 @@ ul.signin-help {
     font-weight: bolder;
     margin-left: .5rem;
     background-color: #EDF0F2;
+    &.border-accent{
+        border: 1px solid $identity;
+    }
 }
 .badge-darkgray{
     font-size: .625rem;
