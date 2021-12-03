@@ -1,95 +1,15 @@
 @@include('./include/platform-header.html')
 
+<!-- Drawer Layout -->
+
 <div class="mdk-drawer-layout js-mdk-drawer-layout float-contents">
     @@include('./include/platform-topbar.html')
     <div class="mdk-drawer-layout__content page-content">
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-        </div>
-        <div class="cd-panel cd-panel--from-right js-cd-panel-main cd-panel--is-visible">
-            <a href="#0" class="cd-panel__close js-cd-close">Close</a>
-
-            <div class="cd-panel__container">
-                <div class="cd-panel__content" data-perfect-scrollbar>
-                    <div class="distribution-inner">
-                        <div class="container-fluid py-4">
-                            <div class="flex d-flex align-items-center">
-                                <div class="mr-24pt">
-                                    <h3 class="mb-0">제품목록</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list-opt-box">
-                            <div class="cell serach-box">
-                                <input type="text" placeholder="이름, ID 검색">
-                                <a href="#n" class="btn btn-secondary btn-sm ml-auto">검색</a>
-                            </div>
-                        </div>
-                        <em class="none-list mb-4 d-none">등록한 제품이 없습니다.</em>
-                        <div class="list-group row-list list-group-flush mb-4">
-                            <div class="list-group-item d-flex active">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt">
-                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
-                                    </div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</h4>
-                                        <div class="card-subtitle text-50 d-flex align-items-center">
-                                            <small class="mr-2">특대</small>
-                                            <small class="mr-2">300g x 15</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                        <span>+50</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt">
-                                        <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
-                                    </div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">제주 한라봉 수제 쿠키(16개입)</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">일반</small>
-                                            <small class="mr-2">192g x 16</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                        <span>+25</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt blank-img"></div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">제주 감귤파이(대/8개입)</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">특대</small>
-                                            <small class="mr-2">224g x 8</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- cd-panel__content -->
-            </div> <!-- cd-panel__container -->
-        </div> <!-- cd-panel -->
-        <!-- // END drawer -->
-        <div class="sidebar-depth sidebar-float" data-perfect-scrollbar>
+        <div class="sidebar-depth" data-perfect-scrollbar>
             <div class="sidebar-depth-wrap">
                 <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
                     <div class="flex title-row">
-                        <h3 class="d-flex align-items-center mb-0 ">BOM 등록</h3>
+                        <h3 class="d-flex align-items-center mb-0 ">BOM 상세보기</h3>
                     </div>
                     <div class="d-flex ml-auto">
                         <a href="#n" class="btn btn-rounded btn-outline-dark mr-2" data-toggle="modal" data-target="#qrCodeModal">
@@ -108,19 +28,9 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="page-separator mt-5 mb-4">
-                    <div class="page-separator__text">BOM 정보</div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="form-group">
-                            <label class="form-label mb-0 text-50" for="">BOM명</label>
-                            <input type="text" class="form-line" id="" placeholder="K7 방등">
-                        </div>
-                    </div>
-                </div>
-                <div class="page-separator mt-5 mb-4">
-                    <div class="page-separator__text">자재 정보</div>
+                    <div class="page-separator__text">BOM 수정</div>
                 </div>
                 <table class="table mb-4 thead-bg-light">
                     <colgroup>
@@ -136,7 +46,7 @@
                             <th class="text-center">제품코드</th>
                             <th class="text-center">제품명</th>
                             <th class="text-center">규격명</th>
-                            <th class="text-center">수량</th>
+                            <th class="text-center">수량/재고 최소수량</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -218,71 +128,24 @@
                         <div class="distribution-inner">
                             <div class="container-fluid d-flex align-items-center py-4">
                                 <div class="flex d-flex align-items-center">
-                                    <a href="dist_pd_list.html" class="pr-2"><i
+                                    <a href="dist_bom_list.html" class="pr-2"><i
                                             class="material-icons">arrow_back</i></a>
                                     <div class="mr-24pt">
-                                        <h3 class="mb-0">제품 등록</h3>
+                                        <h3 class="mb-0">BOM 등록</h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="container-fluid">
                                 <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50" for="">품목 구분</label>
-                                    <select name="category" class="form-line" onchange="if(this.value) location.href=(this.value);">
-                                        <option value="http://localhost:3333/dist_pd_write2.html">자재</option>
-                                        <option value="" selected>완제품</option>
-                                        <option value="http://localhost:3333/dist_pd_write4.html">세트</option>
-                                    </select>
-                                    <div class="pd-label d-flex mt-2">
-                                        <a href="#n" class="btn-sm">BOM 등록</a>
-                                    </div>
-                                    <div class="pd-label d-flex mt-2">
-                                        K7 방등
-                                        <div class="d-flex ml-auto">
-                                            <a href="#n" class="btn-sm">삭제</a>
-                                            <a href="#n" class="btn-sm ml-2">수정</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50" for="">제품코드</label>
-                                    <input type="text" class="form-line pr-6" id="" placeholder="제품코드를 입력해주세요.">
-                                    <a href="#n" class="btn btn-secondary btn-sm">자동 생성</a>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50" for="">제품명</label>
-                                    <input type="text" class="form-line" id="" placeholder="제품명을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50" for="">규격명</label>
-                                    <input type="text" class="form-line" id="" placeholder="규격명을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label mb-0 text-50" for="">재고 최소수량</label>
-                                    <input type="number" class="form-line" id="">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label mb-2 text-50" for="">제품 설명</label>
-                                    <div style="height: 150px;" data-toggle="quill"
-                                        data-quill-placeholder="Quill WYSIWYG editor"
-                                        data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                        <p>Hello World!</p>
-                                        <p>Some initial <strong>bold</strong> text</p>
-                                        <p><br></p>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label for="formFile" class="form-label text-50">제품 이미지</label>
-                                    <small class="text-50 ml-1">권장사이즈(px) : 400x400</small>
-                                    <input class="form-control" type="file" id="formFile">
+                                    <label class="form-label mb-0 text-50 essential" for="eventName">제목</label>
+                                    <input type="text" class="form-line" id="eventName" placeholder="제목을 입력해주세요.">
                                 </div>
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="dist_pd_list.html" class="btn btn-outline-secondary mr-8pt">취소하기</a>
+                                        <a href="dist_pd_items.html" class="btn btn-outline-secondary mr-8pt">취소하기</a>
                                         <a href="completion.html" class="btn btn-outline-accent ml-0">등록하기</a>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -291,6 +154,19 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade img-gallery" id="imgView" tabindex="-1" aria-labelledby="imgViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-gallery-container">
+        <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="material-icons">clear</i></span>
+        </button>
+        <div class="modal-img-container">
+            <img src="images/test_img_product11.jpg">
+        </div>
+    </div>
+</div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="addMaterialsModal" tabindex="-1" aria-labelledby="addMaterials" aria-hidden="true">
@@ -442,10 +318,64 @@
                         </div>
                     </div>
                     <div class="half half-right" data-perfect-scrollbar>
-                        <div class="title-box">자재 <strong class="text-accent">0</strong>개</div>
+                        <div class="title-box">자재 <strong class="text-accent">3</strong>개</div>
                         <!-- 빈 공간 -->
-                        <div class="text-holder">
+                        <div class="text-holder d-none">
                             <em>자재를 선택해주세요</em>
+                        </div>
+                        <!-- 제품 선택시 -->
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="text-accent d-flex align-items-center pr-3"><span class="material-icons">remove_circle</span></a>
+                                <div class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt">
+                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                    </div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">큐브다이아 사각방등 유리</h4>
+                                        <div class="card-subtitle text-50 d-flex align-items-center">
+                                            <small class="mr-2">자재 / 유리 482*482</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                        <span>+50</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="text-accent d-flex align-items-center pr-3"><span class="material-icons">remove_circle</span></a>
+                                <div href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt">
+                                        <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
+                                    </div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">캐스팅 4인치</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 10W 주광</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                        <span>+25</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <a href="#n" class="text-accent d-flex align-items-center pr-3"><span class="material-icons">remove_circle</span></a>
+                                <div href="#n" class="flex d-flex align-items-center">
+                                    <div class="avatar mr-12pt blank-img"></div>
+                                    <div class="flex list-els">
+                                        <h4 class="card-title">캐스팅 5인치</h4>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재 / 12W 주광</small>
+                                        </div>
+                                    </div>
+                                    <div class="pd-count plus-item">
+                                        100
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
