@@ -498,6 +498,17 @@ ul.signin-help {
     font-weight: bolder;
     margin-left: .5rem;
 }
+.badge-black{
+    font-size: .625rem;
+    border: 1px solid #333;
+    border-radius: 50rem;
+    padding: .125rem .5rem;
+    margin-left: .25rem;
+    color: #fff;
+    font-weight: bolder;
+    margin-left: .5rem;
+    background-color: #333;
+}
 .badge-gray{
     font-size: .625rem;
     border: 1px solid #bfbfbf;
@@ -530,6 +541,17 @@ ul.signin-help {
     font-weight: bolder;
     margin-left: .5rem;
     background-color: #777;
+}
+.badge-darkgray-outline{
+    font-size: .625rem;
+    border-radius: 50rem;
+    padding: .125rem .5rem;
+    margin-left: .25rem;
+    color: #777;
+    font-weight: bolder;
+    margin-left: .5rem;
+    border: 1px solid #777;
+    background-color: #EDF0F2;
 }
 .badge-darkblue{
     font-size: .625rem;
@@ -2620,7 +2642,7 @@ em.none-list{
     &.form-line-board{
         .form-group{
             border-bottom: 1px solid $border-color;
-            padding-bottom: 1rem;
+            padding-bottom: .5rem;
             .set-list{
                 padding: 0;
                 &:last-of-type{
@@ -2631,8 +2653,8 @@ em.none-list{
     }
     .form-text{
         font-size: .875rem;
-        line-height: 1;
-        padding: .5rem 0;
+        line-height: 30px;
+        min-height: 30px;
         font-weight: 500;
         margin: 0;
     }
@@ -3344,6 +3366,10 @@ a.btn-list-close{
     &:hover{
         color: #fff;
     }
+}
+.btn .material-icons, .btn .material-icons-outlined{
+    font-size: inherit;
+    line-height: inherit;
 }
 @keyframes rotate-circle {
     0% {
