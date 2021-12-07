@@ -20,11 +20,11 @@
                 </div>
                 <table class="table mb-4 thead-bg-light">
                     <colgroup>
-                        <col width="5%">
-                        <col width="*">
-                        <col width="*">
-                        <col width="*">
-                        <col width="*">
+                        <col width="4%">
+                        <col width="24%">
+                        <col width="24%">
+                        <col width="24%">
+                        <col width="24%">
                     </colgroup>
                     <thead>
                         <tr>
@@ -32,7 +32,7 @@
                             <th class="text-center">제품코드</th>
                             <th class="text-center">제품명</th>
                             <th class="text-center">규격명</th>
-                            <th class="text-center">수량/재고 최소수량</th>
+                            <th class="text-center">재고 최소수량</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,55 +40,33 @@
                             <td class="text-center">
                                 <a href="#n" class="text-accent"><span class="material-icons">remove_circle</span></a>
                             </td>
+                            <td>ACDCOA1W</td>
+                            <td>큐브다이아 거실 1등 유리</td>
+                            <td>유리 482*482</td>
                             <td>
-                                <input type="text" class="form-control" value="ACDCOA1W">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" value="큐브다이아 거실 1등 유리">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" value="유리 482*482">
-                            </td>
-                            <td>
-                                <input type="number" class="form-control text-center" value="1">
-                                <!-- <div class="input-cover">
-                                    <span><input type="number" class="form-control" value="1"></span> /
-                                    <span><input type="number" class="form-control" value="50"></span>
-                                </div> -->
+                                <input type="number" class="form-control text-center" value="50">
                             </td>
                         </tr>
                         <tr>
                             <td class="text-center">
                                 <a href="#n" class="text-accent"><span class="material-icons">remove_circle</span></a>
                             </td>
+                            <td>ACDCOA1W</td>
+                            <td>큐브다이아 거실 1등 유리</td>
+                            <td>유리 482*482</td>
                             <td>
-                                <input type="text" class="form-control" value="ACDCOA1W">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" value="큐브다이아 거실 1등 유리">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" value="유리 482*482">
-                            </td>
-                            <td>
-                                <input type="number" class="form-control text-center" value="1">
+                                <input type="number" class="form-control text-center" value="50">
                             </td>
                         </tr>
                         <tr>
                             <td class="text-center">
                                 <a href="#n" class="text-accent"><span class="material-icons">remove_circle</span></a>
                             </td>
+                            <td>ACDCOA1W</td>
+                            <td>큐브다이아 거실 1등 유리</td>
+                            <td>유리 482*482</td>
                             <td>
-                                <input type="text" class="form-control" value="ACDCOA1W">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" value="큐브다이아 거실 1등 유리">
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" value="유리 482*482">
-                            </td>
-                            <td>
-                                <input type="number" class="form-control text-center" value="1">
+                                <input type="number" class="form-control text-center" value="50">
                             </td>
                         </tr>
                         <tr>
@@ -96,7 +74,7 @@
                                 <div class="d-flex justify-content-center">
                                     <a href="#n" class="btn text-accent" data-toggle="modal" data-target="#addMaterialsModal">
                                         <span class="material-icons mr-1">add</span>
-                                        제품추가
+                                        자재추가
                                     </a>
                                 </div>
                             </td>
@@ -127,8 +105,8 @@
                                     <label class="form-label mb-0 text-50" for="">품목 구분</label>
                                     <select name="category" class="form-line" onchange="if(this.value) location.href=(this.value);">
                                         <option value="" selected>자재</option>
-                                        <option value="http://localhost:3333/dist_pd_write3.html">완제품</option>
-                                        <option value="http://localhost:3333/dist_pd_write4.html">세트</option>
+                                        <option value="dist_pd_write3.html">완제품</option>
+                                        <option value="dist_pd_write4.html">세트</option>
                                     </select>
                                 </div>
 
@@ -158,10 +136,6 @@
                                             <input type="text" class="form-line" id="" placeholder="규격명을 입력해주세요.">
                                         </div>
                                         <div class="form-group mb-32pt">
-                                            <label class="form-label mb-0 text-50" for="">수량</label>
-                                            <input type="number" class="form-line" id="" placeholder="수량을 입력해주세요.">
-                                        </div>
-                                        <div class="form-group mb-32pt">
                                             <label class="form-label mb-0 text-50" for="">재고 최소수량</label>
                                             <input type="number" class="form-line" id="">
                                         </div>
@@ -170,9 +144,7 @@
                                             <div style="height: 150px;" data-toggle="quill"
                                                 data-quill-placeholder="Quill WYSIWYG editor"
                                                 data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                                                <p>Hello World!</p>
-                                                <p>Some initial <strong>bold</strong> text</p>
-                                                <p><br></p>
+                                                <p>제품 설명을 입력해주세요.</p>
                                             </div>
                                         </div>
                                         <div class="form-group mb-32pt">
@@ -190,10 +162,6 @@
 
                                     </div>
                                     <div id="board-tab2" class="tab-pane" role="tabpanel">
-                                        <div class="form-group mb-32pt">
-                                            <label for="formFile" class="form-label text-50">엑셀파일 업로드</label>
-                                            <input class="form-control" type="file" id="formFile">
-                                        </div>
                                         <div class="my-32pt">
                                             <div class="d-flex align-items-center justify-content-center">
                                                 <a href="dist_pd_list.html" class="btn btn-outline-secondary mr-8pt">취소하기</a>

@@ -375,17 +375,6 @@
                             <h3 class="d-flex align-items-center mb-0">히스토리</h3>
                             <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
                         </div>
-                        <div class="flatpickr-wrapper d-none">
-                            <div id="recent_orders_date" data-toggle="flatpickr" data-flatpickr-wrap="true"
-                                data-flatpickr-mode="range" data-flatpickr-alt-format="d/m/Y"
-                                data-flatpickr-date-format="d/m/Y">
-                                <a href="javascript:void(0)" class="d-flex" data-toggle>
-                                    <span class="material-icons-outlined">edit_calendar</span>
-                                </a>
-                                <input class="flatpickr-hidden-input" type="hidden" value="01/01/2021 to 31/12/2021"
-                                    data-input>
-                            </div>
-                        </div>
                     </div>
                     <em class="none-list mb-4 d-none">히스토리가 없습니다.</em>
                     <div class="accordion js-accordion list-group-flush" id="parent">
@@ -402,10 +391,12 @@
                                 <div class="accordion__menu-link align-items-center">
                                     <div class="visitor-group">
                                         <ul class="mb-0">
-                                            <li>재고<span class="text-accent">100</span></li>
-                                            <li>입고<span class="text-accent">100</span></li>
-                                            <li>출고<span class="text-primary">400</span></li>
-                                            <li>조정<span class="text-primary">400</span></li>
+                                            <li>
+                                                재고<span class="">100</span>
+                                            </li>
+                                            <li>입고<span class="text-accent">1</span></li>
+                                            <li>출고<span class="text-primary">1</span></li>
+                                            <li>조정<span class="">1</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -420,19 +411,13 @@
                                                         class="material-icons font-size-16pt icon--left">arrow_downward</span>입고
                                                     대기</h6>
                                                 <ul class="mb-2">
-                                                    <li>2021-08-23 15:29:04</li>
-                                                    <li>창고1</li>
+                                                    <li>2021-11-25 14:00:10</li>
+                                                    <li>제1물류창고</li>
                                                 </ul>
                                                 <span class="writer">leo jeong</span>
                                             </div>
                                             <div class="quantity">
-                                                <h6>+5</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <div>15</div>
-                                                    <span
-                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                    <div>100</div>
-                                                </div>
+                                                <h6>0/1</h6>
                                             </div>
                                         </a>
                                     </div>
@@ -449,18 +434,12 @@
                                                     완료</h6>
                                                 <ul class="mb-2">
                                                     <li>2021-08-23 15:29:04</li>
-                                                    <li>창고1</li>
+                                                    <li>제1물류창고</li>
                                                 </ul>
                                                 <span class="writer">leo jeong</span>
                                             </div>
                                             <div class="quantity">
-                                                <h6>+100</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <div>15</div>
-                                                    <span
-                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                    <div>100</div>
-                                                </div>
+                                                <h6>15</h6>
                                             </div>
                                         </a>
                                     </div>
@@ -474,23 +453,17 @@
                                                     완료</h6>
                                                 <ul class="mb-2">
                                                     <li>2021-08-23 15:29:04</li>
-                                                    <li>창고1</li>
+                                                    <li>제1물류창고</li>
                                                 </ul>
                                                 <span class="writer">leo jeong</span>
                                             </div>
                                             <div class="quantity">
-                                                <h6>-5</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <div>15</div>
-                                                    <span
-                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                    <div>100</div>
-                                                </div>
+                                                <h6>5</h6>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="accordion__menu-link state-down">
+                                <div class="accordion__menu-link state-up">
                                     <div class="panel-list">
                                         <a href="dist_pd_history.html" class="d-flex align-items-start">
                                             <div class="mr-3">
@@ -499,18 +472,12 @@
                                                     완료</h6>
                                                 <ul class="mb-2">
                                                     <li>2021-08-23 15:29:04</li>
-                                                    <li>창고1</li>
+                                                    <li>제1물류창고</li>
                                                 </ul>
                                                 <span class="writer">leo jeong</span>
                                             </div>
                                             <div class="quantity">
-                                                <h6>-23</h6>
-                                                <div class="d-flex align-items-center">
-                                                    <div>15</div>
-                                                    <span
-                                                        class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                    <div>100</div>
-                                                </div>
+                                                <h6>10</h6>
                                             </div>
                                         </a>
                                     </div>
@@ -716,7 +683,6 @@
                                         </div>
                                         <div class="pd-count plus-item">
                                             100
-                                            <span>+50</span>
                                         </div>
                                     </a>
                                 </div>
@@ -734,7 +700,6 @@
                                         </div>
                                         <div class="pd-count plus-item">
                                             100
-                                            <span>+25</span>
                                         </div>
                                     </a>
                                 </div>
