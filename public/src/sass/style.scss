@@ -514,6 +514,16 @@ ul.signin-help {
     font-weight: bolder;
     margin-left: .5rem;
 }
+.badge-red{
+    font-size: .625rem;
+    border: 1px solid $identity;
+    border-radius: 50rem;
+    padding: .125rem .5rem;
+    margin-left: .25rem;
+    color: $identity;
+    font-weight: bolder;
+    margin-left: .5rem;
+}
 .badge-lightgray, a.badge-lightgray{
     font-size: .625rem;
     border-radius: 50rem;
