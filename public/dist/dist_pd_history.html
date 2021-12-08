@@ -317,15 +317,6 @@
                         <strong class="navbar-text-100">4건</strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center mr-4">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i class="material-icons">notification_important</i></span>
-                    </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">미확인 알림</span>
-                        <strong class="navbar-text-100">1건</strong>
-                    </small>
-                </span>
                 <div class="filter-btn-cell d-flex flex justify-content-end align-items-center">
                     <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
                 </div>
@@ -363,17 +354,13 @@
                     <div class="d-flex align-items-center mb-24pt">
                         <div class="d-flex flex-row align-items-center">
                             <h3 class="d-flex align-items-center mb-0 ">상세 내역</h3>
-                            <span class="badge-black">검수</span>
                         </div>
                         <div class="d-flex ml-auto">
                             <a href="#n" class="btn btn-rounded btn-outline-accent mr-2">
                                 <i class="material-icons icon--left">arrow_downward</i>입고완료
                             </a>
                             <a href="#n" class="btn btn-rounded btn-outline-dark mr-2">
-                                <i class="material-icons-outlined icon--left">fact_check</i>검수 취소
-                            </a>
-                            <a href="#n" class="btn btn-rounded btn-outline-dark mr-2">
-                                <i class="material-icons-outlined icon--left">restart_alt</i>재지시
+                                <i class="material-icons-outlined icon--left">qr_code_scanner</i>스캔검수취소
                             </a>
                             <a href="#n" class="btn btn-rounded btn-outline-dark mr-2" data-toggle="modal" data-target="#qrCodeModal">
                                 <i class="material-icons icon--left">qr_code</i>QR 인쇄
@@ -433,7 +420,7 @@
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label class="form-label mb-2 text-50" for="">납품처</label>
+                                <label class="form-label mb-2 text-50" for="">공급처</label>
                                 <p class="form-text mb-0">삼진조명</p>
                             </div>
                         </div>
@@ -478,7 +465,29 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="text-center">1 EA</td>
+                                <td class="text-center"><span class="mr-3">1</span> EA</td>
+                                <td class="text-center">
+                                    <a href="#n" class="qr-thumb" data-toggle="modal" data-target="#qrCodeModal">
+                                        <span class="material-icons-outlined">qr_code_2</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="flex d-flex align-items-center">
+                                        <a href="#n" class="avatar mr-12pt">
+                                            <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
+                                        </a>
+                                        <div class="flex list-els">
+                                            <h6 class="m-0">캐스팅 5인치</h6>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">자재</small>
+                                                <small class="mr-2">12W 주광</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center"><span class="mr-3">1</span> EA</td>
                                 <td class="text-center">
                                     <a href="#n" class="qr-thumb" data-toggle="modal" data-target="#qrCodeModal">
                                         <span class="material-icons-outlined">qr_code_2</span>
@@ -491,8 +500,12 @@
                     <div class="page-separator mt-5">
                         <div class="page-separator__text">수정 전 내역</div>
                     </div>
+                    <div class="empty-state border-0">
+                        <p class="empty-icon m-0"><span class="material-icons-outlined text-10">info</span></p>
+                        <em class="empty-txt m-0 font-size-24pt">히스토리가 존재하지 않습니다.</em>
+                    </div>
 
-                    <div class="accordion js-accordion accordion--boxed list-group-flush" id="parent">
+                    <div class="accordion js-accordion accordion--boxed list-group-flush d-none" id="parent">
                         <div class="accordion__item mb-4">
                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                 data-target="#course-toc-1" data-parent="#parent">
@@ -732,33 +745,6 @@
                                 <div class="accordion list-group-flush border-top-1">
                                     <div class="accordion__item">
                                         <div class="accordion__menu collapse show">
-                                            <div class="accordion__menu-link">
-                                                <div class="panel-list">
-                                                    <a href="#n" class="d-flex align-items-start">
-                                                        <!-- <div class="d-flex">
-                                                            <i class="material-icons text-30">archive</i>
-                                                        </div> -->
-                                                        <div class="mr-3">
-                                                            <h6><span
-                                                                    class="material-icons font-size-16pt icon--left">arrow_forward</span>이동
-                                                                대기</h6>
-                                                            <ul class="mb-2">
-                                                                <li>2021-08-23 13:10:45</li>
-                                                            </ul>
-                                                            <span class="writer">leo jeong</span>
-                                                        </div>
-                                                        <div class="quantity">
-                                                            <h6>5</h6>
-                                                            <div class="d-flex align-items-center">
-                                                                <div>창고1</div>
-                                                                <span
-                                                                    class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                                <div>창고2</div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
                                             <div class="accordion__menu-link active">
                                                 <div class="panel-list">
                                                     <a href="#n" class="d-flex align-items-start">
@@ -768,7 +754,7 @@
                                                         <div class="mr-3">
                                                             <div class="d-flex flex-row align-items-center mb-2">
                                                                 <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">arrow_downward</span>입고 대기</h6>
-                                                                <span class="badge-black">검수</span>
+                                                                <span class="badge-black">스캔검수</span>
                                                             </div>
                                                             <div class="text-els">큐브다이아 사각방등 유리</div>
                                                             <ul class="mb-2">
@@ -778,10 +764,7 @@
                                                             <span class="writer">leo jeong</span>
                                                         </div>
                                                         <div class="quantity">
-                                                            <h6>+1</h6>
-                                                            <div class="d-flex align-items-center justify-content-end">
-                                                                100
-                                                            </div>
+                                                            <h6>0/2</h6>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -795,7 +778,7 @@
                                                         <div class="mr-3">
                                                             <div class="d-flex flex-row align-items-center mb-2">
                                                                 <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">arrow_downward</span>입고 완료</h6>
-                                                                <span class="badge-pich">수정</span>
+                                                                <!-- <span class="badge-pich">수정</span> -->
                                                             </div>
                                                             <div class="text-els">큐브다이아 사각방등 유리</div>
                                                             <ul class="mb-2">
@@ -805,12 +788,7 @@
                                                             <span class="writer">leo jeong</span>
                                                         </div>
                                                         <div class="quantity">
-                                                            <h6>+100</h6>
-                                                            <div class="d-flex align-items-center justify-content-end">
-                                                                <div>85</div>
-                                                                <span class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                                <div>100</div>
-                                                            </div>
+                                                            <h6>15</h6>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -831,13 +809,7 @@
                                                             <span class="writer">leo jeong</span>
                                                         </div>
                                                         <div class="quantity">
-                                                            <h6>-5</h6>
-                                                            <div class="d-flex align-items-center justify-content-end">
-                                                                <div>90</div>
-                                                                <span
-                                                                    class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                                <div>85</div>
-                                                            </div>
+                                                            <h6>5</h6>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -848,7 +820,7 @@
                                                         <div class="mr-3">
                                                             <div class="d-flex flex-row align-items-center mb-2">
                                                                 <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">swap_vert</span>조정 완료</h6>
-                                                                <span class="badge-darkgray-outline">취소</span>
+                                                                <!-- <span class="badge-darkgray-outline">취소</span> -->
                                                             </div>
                                                             <div class="text-els">큐브다이아 사각방등 유리</div>
                                                             <ul class="mb-2">
@@ -858,13 +830,7 @@
                                                             <span class="writer">leo jeong</span>
                                                         </div>
                                                         <div class="quantity">
-                                                            <h6>+10</h6>
-                                                            <div class="d-flex align-items-center justify-content-end">
-                                                                <div>80</div>
-                                                                <span
-                                                                    class="material-icons font-size-16pt text-30">chevron_right</span>
-                                                                <div>90</div>
-                                                            </div>
+                                                            <h6>10</h6>
                                                         </div>
                                                     </a>
                                                 </div>

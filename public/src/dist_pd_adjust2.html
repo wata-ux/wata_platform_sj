@@ -1,0 +1,278 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout float-contents">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <div class="sidebar-depth" data-perfect-scrollbar>
+            <div class="sidebar-depth-wrap">
+                <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt">
+                    <div class="flex title-row">
+                        <h3 class="d-flex align-items-center mb-0 ">조정서</h3>
+                    </div>
+                    <a href="#n" class="btn btn-rounded btn-outline-dark ml-2">
+                        <i class="material-icons icon--left">swap_vert</i>조정
+                    </a>
+                </div>
+                <div class="contents-view">
+                    <div class="page-separator mt-5">
+                        <div class="page-separator__text">조정 정보</div>
+                    </div>
+
+                    <!-- 조정 -->
+                    <table class="table mb-4 thead-bg-light">
+                        <colgroup>
+                            <col width="5%">
+                            <col width="*">
+                            <col width="160px">
+                            <col width="100px">
+                            <col width="160px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center"></th>
+                                <th class="text-left">제품 정보</th>
+                                <th class="text-center">위치</th>
+                                <th class="text-center">재고</th>
+                                <th class="text-center">재고 조정</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <a href="#n" class="text-accent"><span class="material-icons">remove_circle</span></a>
+                                </td>
+                                <td>
+                                    <div class="flex d-flex align-items-center">
+                                        <a href="#n" class="avatar avatar-icon mr-12pt">
+                                            <span class="material-icons-outlined">inventory_2</span>
+                                        </a>
+                                        <div class="flex list-els">
+                                            <div class="d-flex flex-row">
+                                                <h6 class="m-0">캐스팅</h6>
+                                            </div>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">세트</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">제1물류창고</td>
+                                <td class="text-center">100</td>
+                                <td class="text-right">
+                                    <div class="d-inline-flex align-items-center">
+                                        <span class="d-flex align-items-center">
+                                            <input type="number" class="form-control font-weight-bolder text-center" value="25" style="width: 6rem;"><span class="ml-2">EA</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="set-buttons">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="d-flex">
+                                            <a href="#n" class="btn align-items-center text-secondary mr-2"><span class="material-icons-outlined mr-1">link_off</span> 세트 해제</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="set-area">
+                                    <h6>세트구성</h6>
+                                    <table class="child-table m-0">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width="*">
+                                            <col width="100px">
+                                            <col width="160px">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <div class="flex d-flex align-items-center">
+                                                        <a href="#n" class="avatar mr-12pt">
+                                                            <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                                        </a>
+                                                        <div class="flex list-els">
+                                                            <h6 class="m-0">캐스팅 4인치</h6>
+                                                            <div class="card-subtitle text-50">
+                                                                <small class="mr-2">자재</small>
+                                                                <small class="mr-2">10W 주광</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">300</td>
+                                                <td class="text-right">8<span class="text-50 mr-3">(1SET : 4)</span> EA</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <div class="flex d-flex align-items-center">
+                                                        <a href="#n" class="avatar mr-12pt">
+                                                            <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                                        </a>
+                                                        <div class="flex list-els">
+                                                            <h6 class="m-0">캐스팅 5인치</h6>
+                                                            <div class="card-subtitle text-50">
+                                                                <small class="mr-2">자재</small>
+                                                                <small class="mr-2">12W 주광</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">300</td>
+                                                <td class="text-right">8<span class="text-50 mr-3">(1SET : 4)</span> EA</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-distribution active" id="sm-distribution">
+                        <!-- 프로젝트 등록 -->
+                        <div class="distribution-inner">
+                            <div class="container-fluid py-4">
+                                <div class="flex d-flex align-items-center">
+                                    <a href="dist_pd_landing.html" class="circle-pin pr-2"><i
+                                            class="material-icons">arrow_back</i></a>
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">조정</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-opt-box">
+                                <div class="cell serach-box">
+                                    <input type="text" placeholder="제품 검색">
+                                    <a href="#n" class="btn btn-secondary btn-sm ml-auto">검색</a>
+                                </div>
+                                <div class="cell select-box">
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="">제1물류창고</option>
+                                        <option value="">제2물류창고</option>
+                                        <option value="">제3물류창고</option>
+                                        <option value="">제4물류창고</option>
+                                    </select>
+                                </div>
+                                <div class="cell select-box">
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="">품목전체</option>
+                                        <option value="">자재</option>
+                                        <option value="">완제품</option>
+                                        <option value="">세트</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="list-group row-list list-group-flush mb-4">
+                                <div class="list-group-item d-flex">
+                                    <a href="#n" class="flex d-flex align-items-center">
+                                        <div class="avatar mr-12pt blank-img">
+                                            <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                        </div>
+                                        <div class="flex list-els">
+                                            <h4 class="card-title">큐브다이아 사각방등 유리</h4>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">자재</small>
+                                                <small class="mr-2">유리 482*482</small>
+                                            </div>
+                                        </div>
+                                        <div class="pd-count plus-item">
+                                            100
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="list-group-item d-flex">
+                                    <a href="#n" class="flex d-flex align-items-center">
+                                        <div class="avatar mr-12pt">
+                                            <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
+                                        </div>
+                                        <div class="flex list-els">
+                                            <h4 class="card-title">캐스팅 4인치</h4>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">자재</small>
+                                                <small class="mr-2">10W 주광</small>
+                                            </div>
+                                        </div>
+                                        <div class="pd-count plus-item">
+                                            100
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="list-group-item d-flex">
+                                    <a href="#n" class="flex d-flex align-items-center">
+                                        <div class="avatar mr-12pt blank-img"></div>
+                                        <div class="flex list-els">
+                                            <h4 class="card-title">캐스팅 5인치</h4>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">자재</small>
+                                                <small class="mr-2">12W 주광</small>
+                                            </div>
+                                        </div>
+                                        <div class="pd-count plus-item">
+                                            100
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="list-group-item d-flex">
+                                    <a href="#n" class="flex d-flex align-items-center">
+                                        <div class="avatar mr-12pt blank-img"></div>
+                                        <div class="flex list-els">
+                                            <h4 class="card-title">K7 방등</h4>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">완제품</small>
+                                                <small class="mr-2">W500 x D500 x H85</small>
+                                            </div>
+                                        </div>
+                                        <div class="pd-count plus-item">
+                                            100
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="list-group-item d-flex">
+                                    <a href="#n" class="flex d-flex align-items-center">
+                                        <div class="avatar mr-12pt blank-img"></div>
+                                        <div class="flex list-els">
+                                            <h4 class="card-title">캐스팅</h4>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">세트</small>
+                                            </div>
+                                        </div>
+                                        <div class="pd-count plus-item">
+                                            50
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade img-gallery" id="imgView" tabindex="-1" aria-labelledby="imgViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-gallery-container">
+        <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="material-icons">clear</i></span>
+        </button>
+        <div class="modal-img-container">
+            <img src="images/test_img_product11.jpg">
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

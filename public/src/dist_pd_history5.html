@@ -11,12 +11,6 @@
                             <h3 class="d-flex align-items-center mb-0 ">상세 내역</h3>
                         </div>
                         <div class="d-flex ml-auto">
-                            <a href="#n" class="btn btn-rounded btn-outline-accent mr-2">
-                                <i class="material-icons icon--left">arrow_downward</i>입고완료
-                            </a>
-                            <a href="#n" class="btn btn-rounded btn-outline-dark mr-2">
-                                <i class="material-icons-outlined icon--left">qr_code_scanner</i>스캔검수취소
-                            </a>
                             <a href="#n" class="btn btn-rounded btn-outline-dark mr-2" data-toggle="modal" data-target="#qrCodeModal">
                                 <i class="material-icons icon--left">qr_code</i>QR 인쇄
                             </a>
@@ -34,26 +28,26 @@
                 <div class="contents-view form-line-board">
 
                     <div class="page-separator mt-5">
-                        <div class="page-separator__text">입고 정보</div>
+                        <div class="page-separator__text">출고 정보</div>
                     </div>
 
                     <div class="row">
                         <div class="col-4">
                             <div class="form-group">
-                                <label class="form-label mb-2 text-50" for="">입고지시</label>
+                                <label class="form-label mb-2 text-50" for="">출고지시</label>
                                 <p class="form-text mb-0">2021-11-25 09:00:00</p>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label class="form-label mb-2 text-50" for="">입고완료</label>
-                                <p class="form-text mb-0"></p>
+                                <label class="form-label mb-2 text-50" for="">출고완료</label>
+                                <p class="form-text mb-0">2021-11-25 14:00:10</p>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label class="form-label mb-2 text-50" for="">처리자</label>
-                                <p class="form-text mb-0"></p>
+                                <p class="form-text mb-0">Leo Jeong</p>
                             </div>
                         </div>
                     </div>
@@ -75,31 +69,29 @@
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label class="form-label mb-2 text-50" for="">공급처</label>
+                                <label class="form-label mb-2 text-50" for="">납품처</label>
                                 <p class="form-text mb-0">삼진조명</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="form-group">
-                                <label class="form-label mb-2 text-50" for="">창고위치</label>
-                                <p class="form-text mb-0">제1물류창고</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="page-separator mt-5">
-                        <div class="page-separator__text">입고 제품</div>
+                        <div class="page-separator__text">출고 제품</div>
                     </div>
 
                     <table class="table mb-4 thead-bg-light">
                         <colgroup>
                             <col width="*">
+                            <col width="160px">
+                            <col width="100px">
                             <col width="100px">
                             <col width="100px">
                         </colgroup>
                         <thead>
                             <tr>
                                 <th class="text-left">제품 정보</th>
+                                <th class="text-center">위치</th>
+                                <th class="text-center">재고</th>
                                 <th class="text-center">수량</th>
                                 <th class="text-center">QR</th>
                             </tr>
@@ -120,29 +112,9 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="text-center"><span class="mr-3">1</span> EA</td>
-                                <td class="text-center">
-                                    <a href="#n" class="qr-thumb" data-toggle="modal" data-target="#qrCodeModal">
-                                        <span class="material-icons-outlined">qr_code_2</span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="flex d-flex align-items-center">
-                                        <a href="#n" class="avatar mr-12pt">
-                                            <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
-                                        </a>
-                                        <div class="flex list-els">
-                                            <h6 class="m-0">캐스팅 5인치</h6>
-                                            <div class="card-subtitle text-50">
-                                                <small class="mr-2">자재</small>
-                                                <small class="mr-2">12W 주광</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="text-center"><span class="mr-3">1</span> EA</td>
+                                <td class="text-center">제1물류창고</td>
+                                <td class="text-center">90</td>
+                                <td class="text-center"><span class="mr-3">-5</span> EA</td>
                                 <td class="text-center">
                                     <a href="#n" class="qr-thumb" data-toggle="modal" data-target="#qrCodeModal">
                                         <span class="material-icons-outlined">qr_code_2</span>
@@ -152,188 +124,6 @@
                         </tbody>
                     </table>
 
-                    <div class="page-separator mt-5">
-                        <div class="page-separator__text">수정 전 내역</div>
-                    </div>
-                    <div class="empty-state border-0">
-                        <p class="empty-icon m-0"><span class="material-icons-outlined text-10">info</span></p>
-                        <em class="empty-txt m-0 font-size-24pt">히스토리가 존재하지 않습니다.</em>
-                    </div>
-
-                    <div class="accordion js-accordion accordion--boxed list-group-flush d-none" id="parent">
-                        <div class="accordion__item mb-4">
-                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
-                                data-target="#course-toc-1" data-parent="#parent">
-                                <span class="d-flex">2021-09-01 <span class="text-50 ml-2">17:12</span></span>
-                                <span class="badge-pich ml-2 font-weight-bolder">ver.2</span>
-                                <span class="badge-pich ml-2 font-weight-bolder">Leo jeong</span>
-                                <span class="accordion__toggle-icon material-icons ml-auto">keyboard_arrow_down</span>
-                            </a>
-                            <div class="accordion__menu collapse" id="course-toc-1">
-                                <div class="p-5 border-top-1">
-                                    <div class="page-separator">
-                                        <div class="page-separator__text">입고 정보</div>
-                                    </div>
-                                    <table class="table mb-4 table-nowrap thead-bg-light">
-                                        <thead>
-                                            <tr>
-                                                <th>입고일</th>
-                                                <th>창고 위치</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <input id="dateRangePickerSample02" type="text"
-                                                        class="form-control font-weight-bolder d-inline-flex"
-                                                        placeholder="입고날짜를 입력해주세요." data-toggle="daterangepicker"
-                                                        data-daterangepicker-drops="up" data-daterangepicker-single-date-picker="true"
-                                                        style="width:10rem;" disabled>
-                                                </td>
-                                                <td>
-                                                    <select name="category"
-                                                        class="form-control custom-select font-weight-bolder d-inline-flex w-auto" disabled>
-                                                        <option value="창고1" selected>창고1</option>
-                                                        <option value="창고2">창고2</option>
-                                                        <option value="창고3">창고3</option>
-                                                        <option value="창고4">창고4</option>
-                                                        <option value="창고5">창고5</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="page-separator mt-5">
-                                        <div class="page-separator__text">제품 정보</div>
-                                    </div>
-                                    <table class="table mb-4 table-nowrap thead-bg-light">
-                                        <colgroup>
-                                            <col width="*">
-                                            <col width="15%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>제품 정보</th>
-                                                <th>박스 수량</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="flex d-flex align-items-center mr-16pt">
-                                                        <div class="flex d-flex align-items-center mr-16pt">
-                                                            <a href="#n" class="avatar mr-12pt">
-                                                                <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
-                                                            </a>
-                                                            <div class="flex list-els">
-                                                                <h6 class="m-0">제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</h6>
-                                                                <div class="card-subtitle text-50">
-                                                                    <small class="mr-2">특대</small>
-                                                                    <small class="mr-2">300g x 15</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-inline-flex align-items-center">
-                                                        <input type="number" class="form-control font-weight-bolder" style="width:6rem;" value="5" disabled>
-                                                        <span class="ml-2 text-50">Box</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion__item mb-4">
-                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#course-toc-2"
-                                data-parent="#parent">
-                                <span class="d-flex">2021-08-31 <span class="text-50 ml-2">14:25</span></span>
-                                <span class="badge-pich ml-2 font-weight-bolder">ver.1</span>
-                                <span class="badge-pich ml-2 font-weight-bolder">Jaeyong Lee</span>
-                                <span class="accordion__toggle-icon material-icons ml-auto">keyboard_arrow_down</span>
-                            </a>
-                            <div class="accordion__menu collapse" id="course-toc-2">
-                                <div class="p-5 border-top-1">
-                                    <div class="page-separator">
-                                        <div class="page-separator__text">입고 정보</div>
-                                    </div>
-                                    <table class="table mb-4 table-nowrap thead-bg-light">
-                                        <thead>
-                                            <tr>
-                                                <th>입고일</th>
-                                                <th>창고 위치</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <input id="dateRangePickerSample02" type="text"
-                                                        class="form-control font-weight-bolder d-inline-flex"
-                                                        placeholder="입고날짜를 입력해주세요." data-toggle="daterangepicker"
-                                                        data-daterangepicker-drops="up" data-daterangepicker-single-date-picker="true"
-                                                        style="width:10rem;" disabled>
-                                                </td>
-                                                <td>
-                                                    <select name="category"
-                                                        class="form-control custom-select font-weight-bolder d-inline-flex w-auto" disabled>
-                                                        <option value="창고1" selected>창고1</option>
-                                                        <option value="창고2">창고2</option>
-                                                        <option value="창고3">창고3</option>
-                                                        <option value="창고4">창고4</option>
-                                                        <option value="창고5">창고5</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="page-separator mt-5">
-                                        <div class="page-separator__text">제품 정보</div>
-                                    </div>
-                                    <table class="table mb-4 table-nowrap thead-bg-light">
-                                        <colgroup>
-                                            <col width="*">
-                                            <col width="15%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>제품 정보</th>
-                                                <th>박스 수량</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="flex d-flex align-items-center mr-16pt">
-                                                        <div class="flex d-flex align-items-center mr-16pt">
-                                                            <a href="#n" class="avatar mr-12pt">
-                                                                <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
-                                                            </a>
-                                                            <div class="flex list-els">
-                                                                <h6 class="m-0">제주한라봉&딸기 마카롱 쿠키 듀오(특대/15개입)</h6>
-                                                                <div class="card-subtitle text-50">
-                                                                    <small class="mr-2">특대</small>
-                                                                    <small class="mr-2">300g x 15</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-inline-flex align-items-center">
-                                                        <input type="number" class="form-control font-weight-bolder" style="width:6rem;" value="5" disabled>
-                                                        <span class="ml-2 text-50">Box</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -360,7 +150,7 @@
                                 <div class="accordion list-group-flush border-top-1">
                                     <div class="accordion__item">
                                         <div class="accordion__menu collapse show">
-                                            <div class="accordion__menu-link active">
+                                            <div class="accordion__menu-link">
                                                 <div class="panel-list">
                                                     <a href="#n" class="d-flex align-items-start">
                                                         <!-- <div class="d-flex">
@@ -368,8 +158,7 @@
                                                         </div> -->
                                                         <div class="mr-3">
                                                             <div class="d-flex flex-row align-items-center mb-2">
-                                                                <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">arrow_downward</span>입고 대기</h6>
-                                                                <span class="badge-black">스캔검수</span>
+                                                                <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">arrow_upward</span>출고 대기</h6>
                                                             </div>
                                                             <div class="text-els">큐브다이아 사각방등 유리</div>
                                                             <ul class="mb-2">
@@ -379,7 +168,7 @@
                                                             <span class="writer">leo jeong</span>
                                                         </div>
                                                         <div class="quantity">
-                                                            <h6>0/2</h6>
+                                                            <h6>0/1</h6>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -393,7 +182,6 @@
                                                         <div class="mr-3">
                                                             <div class="d-flex flex-row align-items-center mb-2">
                                                                 <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">arrow_downward</span>입고 완료</h6>
-                                                                <!-- <span class="badge-pich">수정</span> -->
                                                             </div>
                                                             <div class="text-els">큐브다이아 사각방등 유리</div>
                                                             <ul class="mb-2">
@@ -408,13 +196,12 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="accordion__menu-link state-down">
+                                            <div class="accordion__menu-link state-down active">
                                                 <div class="panel-list">
-                                                    <a href="#n" class="d-flex align-items-start">
+                                                    <a href="#n" class="d-flex align-items-start active">
                                                         <div class="mr-3">
                                                             <div class="d-flex flex-row align-items-center mb-2">
                                                                 <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">arrow_upward</span>출고 완료</h6>
-                                                                <span class="badge-darkgray">버전 1</span>
                                                             </div>
                                                             <div class="text-els">큐브다이아 사각방등 유리</div>
                                                             <ul class="mb-2">
@@ -435,7 +222,6 @@
                                                         <div class="mr-3">
                                                             <div class="d-flex flex-row align-items-center mb-2">
                                                                 <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">swap_vert</span>조정 완료</h6>
-                                                                <!-- <span class="badge-darkgray-outline">취소</span> -->
                                                             </div>
                                                             <div class="text-els">큐브다이아 사각방등 유리</div>
                                                             <ul class="mb-2">

@@ -1,0 +1,331 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout float-contents">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <div class="sidebar-depth" data-perfect-scrollbar>
+            <div class="sidebar-depth-wrap">
+                <div class="mb-5">
+                    <div class="d-flex align-items-center mb-24pt">
+                        <div class="d-flex flex-row align-items-center">
+                            <h3 class="d-flex align-items-center mb-0 ">상세 내역</h3>
+                        </div>
+                        <div class="d-flex ml-auto">
+                            <div class="btn-group">
+                                <a href="#n" class="btn btn-rounded btn-outline-dark dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">더보기</a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item text-primary" href="#"> 수정</a>
+                                    <a class="dropdown-item text-accent" href="#"> 삭제</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents-view form-line-board">
+
+                    <div class="page-separator mt-5">
+                        <div class="page-separator__text">조정 정보</div>
+                    </div>
+
+                    <table class="table mb-4 thead-bg-light">
+                        <colgroup>
+                            <col width="*">
+                            <col width="150px">
+                            <col width="100px">
+                            <col width="150px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-left">제품 정보</th>
+                                <th class="text-center">위치</th>
+                                <th class="text-center">재고</th>
+                                <th class="text-center">재고 조정</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="flex d-flex align-items-center">
+                                        <a href="#n" class="avatar mr-12pt">
+                                            <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                        </a>
+                                        <div class="flex list-els">
+                                            <h6 class="m-0">큐브다이아 사각방등 유리</h6>
+                                            <div class="card-subtitle text-50">
+                                                <small class="mr-2">자재</small>
+                                                <small class="mr-2">유리 482*482</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">제1물류창고</td>
+                                <td class="text-center">80</td>
+                                <td class="text-center"><span class="mr-3">90</span> EA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-distribution active" id="sm-distribution">
+                        <!-- 프로젝트 등록 -->
+                        <div class="distribution-inner">
+                            <div class="container-fluid py-4">
+                                <div class="flex d-flex align-items-center">
+                                    <a href="dist_pd_landing.html" class="circle-pin pr-2"><i
+                                            class="material-icons">arrow_back</i></a>
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">히스토리</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cd-panel__content">
+                                <div class="accordion list-group-flush border-top-1">
+                                    <div class="accordion__item">
+                                        <div class="accordion__menu collapse show">
+                                            <div class="accordion__menu-link">
+                                                <div class="panel-list">
+                                                    <a href="#n" class="d-flex align-items-start">
+                                                        <!-- <div class="d-flex">
+                                                            <i class="material-icons text-30">archive</i>
+                                                        </div> -->
+                                                        <div class="mr-3">
+                                                            <div class="d-flex flex-row align-items-center mb-2">
+                                                                <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">arrow_upward</span>출고 대기</h6>
+                                                            </div>
+                                                            <div class="text-els">큐브다이아 사각방등 유리</div>
+                                                            <ul class="mb-2">
+                                                                <li>2021-11-26 14:00:10</li>
+                                                                <li>제1물류창고</li>
+                                                            </ul>
+                                                            <span class="writer">leo jeong</span>
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <h6>0/1</h6>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu-link state-up">
+                                                <div class="panel-list">
+                                                    <a href="#n" class="d-flex align-items-start">
+                                                        <!-- <div class="d-flex">
+                                                            <i class="material-icons text-30">archive</i>
+                                                        </div> -->
+                                                        <div class="mr-3">
+                                                            <div class="d-flex flex-row align-items-center mb-2">
+                                                                <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">arrow_downward</span>입고 완료</h6>
+                                                            </div>
+                                                            <div class="text-els">큐브다이아 사각방등 유리</div>
+                                                            <ul class="mb-2">
+                                                                <li>2021-11-26 14:00:10</li>
+                                                                <li>제1물류창고</li>
+                                                            </ul>
+                                                            <span class="writer">leo jeong</span>
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <h6>15</h6>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu-link state-down">
+                                                <div class="panel-list">
+                                                    <a href="#n" class="d-flex align-items-start active">
+                                                        <div class="mr-3">
+                                                            <div class="d-flex flex-row align-items-center mb-2">
+                                                                <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">arrow_upward</span>출고 완료</h6>
+                                                            </div>
+                                                            <div class="text-els">큐브다이아 사각방등 유리</div>
+                                                            <ul class="mb-2">
+                                                                <li>2021-11-26 14:00:10</li>
+                                                                <li>제1물류창고</li>
+                                                            </ul>
+                                                            <span class="writer">leo jeong</span>
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <h6>5</h6>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu-link state-up active">
+                                                <div class="panel-list">
+                                                    <a href="#n" class="d-flex align-items-start">
+                                                        <div class="mr-3">
+                                                            <div class="d-flex flex-row align-items-center mb-2">
+                                                                <h6 class="m-0"><span class="material-icons font-size-16pt icon--left">swap_vert</span>조정 완료</h6>
+                                                            </div>
+                                                            <div class="text-els">큐브다이아 사각방등 유리</div>
+                                                            <ul class="mb-2">
+                                                                <li>2021-11-26 14:00:10</li>
+                                                                <li>제1물류창고</li>
+                                                            </ul>
+                                                            <span class="writer">leo jeong</span>
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <h6>10</h6>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade img-gallery" id="imgView" tabindex="-1" aria-labelledby="imgViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-gallery-container">
+        <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="material-icons">clear</i></span>
+        </button>
+        <div class="modal-img-container">
+            <img src="images/test_img_product11.jpg">
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCode" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="qrCode">QR 인쇄</h5>
+            </div>
+            <div class="modal-body">
+                <div class="qr-cover">
+                    <img src="images/qr_test.webp" class="img-qr-code" alt="">
+                    <div class="d-flex flex-row align-items-center justify-content-center py-2 font-size-24pt font-weight-bolder">
+                        <span class="text-accent mr-2">32 </span> / 100
+                    </div>
+                    <p class="text-50">인쇄매수를 확인하세요.</p>
+                    <!-- <p><a href="#n" class="btn btn-link text-accent">인쇄 대기</a></p>
+                    <p><a href="#n" class="btn btn-link text-accent">인쇄 완료</a></p> -->
+                </div>
+                <table class="table mb-4 thead-bg-light">
+                    <colgroup>
+                        <col width="5%">
+                        <col width="*%">
+                        <col width="20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-toggle-check-all"
+                                        data-target="#projects"
+                                        id="customCheckAll">
+                                    <label class="custom-control-label"
+                                        for="customCheckAll"><span class="text-hide">Toggle all</span></label>
+                                </div>
+                            </th>
+                            <th>리스트 정보</th>
+                            <th>인쇄매수</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projects">
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_1">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_1"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center">
+                                    <div class="flex list-els">
+                                        <h6 class="m-0">R20211130-00001</h6>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">릴리즈 코드</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_2">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_2"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center">
+                                    <a href="#n" class="avatar mr-12pt">
+                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                    </a>
+                                    <div class="flex list-els">
+                                        <h6 class="m-0">큐브다이아 사각방등 유리</h6>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재</small>
+                                            <small class="mr-2">유리 482*482</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox"
+                                        class="custom-control-input js-check-selected-row"
+                                        id="customCheck1_3">
+                                    <label class="custom-control-label"
+                                        for="customCheck1_3"><span class="text-hide">Check</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex d-flex align-items-center">
+                                    <a href="#n" class="avatar mr-12pt">
+                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
+                                    </a>
+                                    <div class="flex list-els">
+                                        <h6 class="m-0">캐스팅 4인치</h6>
+                                        <div class="card-subtitle text-50">
+                                            <small class="mr-2">자재</small>
+                                            <small class="mr-2">10W 주광</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link btn-second-modal-close" data-dismiss="modal">취소</button>
+                <!-- <button type="button" class="btn btn-light" data-dismiss="modal" disabled="">인쇄</button> -->
+                <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

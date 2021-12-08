@@ -82,12 +82,12 @@
                                 </div>
                             </div>
                             <div class="sort-cover mb-3">
-                                    <select class="form-none border-0" name="" id="">
+                                <div class="set-date ml-auto">
+                                    <select class="form-none font-weight-bold border-0 mr-5" name="" id="">
                                         <option value="">전체</option>
                                         <option value="">공급처1</option>
                                         <option value="">공급처2</option>
                                     </select>
-                                <div class="set-date ml-auto">
                                     <span class="material-icons-outlined font-size-16pt">
                                         date_range
                                     </span>
@@ -98,7 +98,7 @@
                                             data-flatpickr-date-format="d/m/Y">
                                             <a href="javascript:void(0)" class="btn-link" data-toggle>30/07/2021 to
                                                 01/07/2021</a>
-                                            <input class="flatpickr-hidden-input" type="hidden" value="30/07/2021 to 01/07/2021"
+                                            <input class="flatpickr-hidden-input" type="hidden" value="today"
                                                 data-input>
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <table class="table mb-4 thead-bg-light">
+                            <table class="table mb-4">
                                 <colgroup>
                                     <col width="*">
                                     <col width="*">
@@ -145,6 +145,11 @@
                                     <col width="*">
                                 </colgroup>
                                 <thead>
+                                    <tr>
+                                        <th colspan="5" class="bg-light">
+                                            입고/출고
+                                        </th>
+                                    </tr>
                                     <tr>
                                         <th class="text-center">제품코드</th>
                                         <th class="text-center">제품명</th>

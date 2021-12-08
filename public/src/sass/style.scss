@@ -10262,3 +10262,6 @@ xnugget info
     padding-left: 12px;
     padding-right: 12px;
 }
+[dir] .accordion__menu-link:not(:last-child){
+    margin-bottom: 0;
+}
