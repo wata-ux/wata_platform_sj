@@ -10275,3 +10275,30 @@ xnugget info
 [dir] .accordion__menu-link:not(:last-child){
     margin-bottom: 0;
 }
+
+.mo-landing-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    a.btn{
+        font-size: 1rem;
+        padding: .5rem 2rem;
+        margin-bottom: 1rem;
+        span{
+            font-size: 1.5rem;
+            margin-right: .5rem;
+        }
+    }
+    p{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .mo-landing-copy{
+        position: absolute;
+        bottom: 2rem;
+        color: #999;
+    }
+}
