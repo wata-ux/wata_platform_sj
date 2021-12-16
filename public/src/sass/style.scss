@@ -756,6 +756,13 @@ ul.signin-help {
         .media{
             border-radius: .25rem;
         }
+        .scr-cover{
+            max-height: 500px;
+            position: relative;
+            .list-group{
+                margin-top: -1px;
+            }
+        }
     }
     .search-form{
         border: 1px solid $border-color;
