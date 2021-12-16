@@ -16,14 +16,7 @@
                         <a href="#n" class="btn btn-rounded btn-outline-dark mr-2" data-toggle="modal" data-target="#qrCodeModal">
                             <i class="material-icons icon--left">file_download</i>엑셀 다운로드
                         </a>
-                        <div class="btn-group">
-                            <a href="#n" class="btn btn-rounded btn-outline-dark dropdown-toggle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">BOM 불러오기</a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item text-primary" href="#"> 수정</a>
-                                <a class="dropdown-item text-accent" href="#"> 삭제</a>
-                            </div>
-                        </div>
+                        <a href="#n" class="btn btn-rounded btn-outline-dark" data-toggle="modal" data-target="#bomAdd">BOM 불러오기</a>
                     </div>
                 </div>
                 <div class="page-separator mt-5 mb-4">
@@ -134,7 +127,7 @@
                                         <option value="dist_pd_write4.html">세트</option>
                                     </select>
                                     <div class="pd-label d-flex mt-2">
-                                        <a href="#n" class="btn-sm" data-toggle="modal" data-target="#bomAdd">BOM 등록</a>
+                                        <a href="#n" class="btn-sm">BOM 등록</a>
                                     </div>
                                     <div class="pd-label d-flex mt-2">
                                         K7 방등
@@ -357,227 +350,6 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="addMaterialsModal" tabindex="-1" aria-labelledby="addMaterials" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered col-wide-10">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addMaterials">자재 추가</h5>
-            </div>
-            <div class="modal-body p-0">
-                <div class="half-container">
-                    <div class="half half-left" data-perfect-scrollbar>
-                        <div class="list-opt-box">
-                            <div class="cell serach-box">
-                                <input type="text" placeholder="자재 검색">
-                                <a href="#n" class="btn btn-secondary btn-sm ml-auto">검색</a>
-                            </div>
-                        </div>
-                        <div class="list-group list-group-flush">
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt">
-                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
-                                    </div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">큐브다이아 사각방등 유리</h4>
-                                        <div class="card-subtitle text-50 d-flex align-items-center">
-                                            <small class="mr-2">자재 / 유리 482*482</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt">
-                                        <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
-                                    </div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">캐스팅 4인치</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 10W 주광</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt blank-img"></div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">캐스팅 5인치</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 12W 주광</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt blank-img"></div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">자재 리스트</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 유리 482*482</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt blank-img"></div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">자재 리스트</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 유리 482*482</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt blank-img"></div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">자재 리스트</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 유리 482*482</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt blank-img"></div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">자재 리스트</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 유리 482*482</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt blank-img"></div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">자재 리스트</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 유리 482*482</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt blank-img"></div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">자재 리스트</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 유리 482*482</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="half half-right" data-perfect-scrollbar>
-                        <div class="title-box">자재 <strong class="text-accent">3</strong>개</div>
-                        <!-- 빈 공간 -->
-                        <div class="text-holder d-none">
-                            <em>자재를 선택해주세요</em>
-                        </div>
-                        <!-- 제품 선택시 -->
-                        <div class="list-group list-group-flush">
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="text-accent d-flex align-items-center pr-3"><span class="material-icons">remove_circle</span></a>
-                                <div class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt">
-                                        <img src="images/jekiss_img01.jpg" alt="" class="avatar-img rounded">
-                                    </div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">큐브다이아 사각방등 유리</h4>
-                                        <div class="card-subtitle text-50 d-flex align-items-center">
-                                            <small class="mr-2">자재 / 유리 482*482</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                        <span>+50</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="text-accent d-flex align-items-center pr-3"><span class="material-icons">remove_circle</span></a>
-                                <div href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt">
-                                        <img src="images/jekiss_img02.jpg" alt="" class="avatar-img rounded">
-                                    </div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">캐스팅 4인치</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 10W 주광</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                        <span>+25</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-group-item d-flex">
-                                <a href="#n" class="text-accent d-flex align-items-center pr-3"><span class="material-icons">remove_circle</span></a>
-                                <div href="#n" class="flex d-flex align-items-center">
-                                    <div class="avatar mr-12pt blank-img"></div>
-                                    <div class="flex list-els">
-                                        <h4 class="card-title">캐스팅 5인치</h4>
-                                        <div class="card-subtitle text-50">
-                                            <small class="mr-2">자재 / 12W 주광</small>
-                                        </div>
-                                    </div>
-                                    <div class="pd-count plus-item">
-                                        100
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-link btn-second-modal-close" data-dismiss="modal">취소</button>
-                <!-- <button type="button" class="btn btn-light" data-dismiss="modal" disabled="">확인</button> -->
-                <button type="button" class="btn btn-accent btn-second-modal-close" data-dismiss="modal">적용</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
 <div class="modal fade" id="bomAdd" tabindex="-1" aria-labelledby="bomAddLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -739,7 +511,63 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link btn-second-modal-close" data-dismiss="modal">취소</button>
-                <button type="button" class="btn btn-accent" data-dismiss="modal">미리보기</button>
+                <button type="button" class="btn btn-accent btn-second-modal within-first-modal" data-toggle="modal" data-target="#bomListModal">미리보기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="bomListModal" tabindex="-1" aria-labelledby="bomList" aria-hidden="true">
+    <div class="modal-dialog col-wide-12 modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bomList">BOM 정보</h5>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-row align-items-center bg-light py-3 px-4 border-top-1">
+                    <h6 class="m-0">K7 방등</h6>
+                </div>
+                <table class="table">
+                    <colgroup>
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">제품코드</th>
+                            <th class="text-center">제품명</th>
+                            <th class="text-center">규격명</th>
+                            <th class="text-center">수량</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ACDCOA1W</td>
+                            <td>큐브다이아 거실 1등 유리</td>
+                            <td>유리 482*482</td>
+                            <td class="text-center">1</td>
+                        </tr>
+                        <tr>
+                            <td>ACDCOA1W</td>
+                            <td>큐브다이아 거실 1등 유리</td>
+                            <td>유리 482*482</td>
+                            <td class="text-center">1</td>
+                        </tr>
+                        <tr>
+                            <td>ACDCOA1W</td>
+                            <td>큐브다이아 거실 1등 유리</td>
+                            <td>유리 482*482</td>
+                            <td class="text-center">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">불러오기</button>
             </div>
         </div>
     </div>
