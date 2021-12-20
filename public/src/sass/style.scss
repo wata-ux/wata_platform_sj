@@ -306,6 +306,14 @@ input::placeholder, textarea::placeholder{
             border: none;
             td{
                 border: none;
+                border-bottom: 1px dashed $border-color;
+            }
+            tr{
+                &:last-child{
+                    td{
+                        border-bottom: none;
+                    }
+                }
             }
         }
     }
@@ -319,6 +327,30 @@ input::placeholder, textarea::placeholder{
     }
     td.set-buttons{
         border-top: none;
+    }
+    .count-group{
+
+    }
+    .col-group{
+        display: flex;
+        span.set-col{
+            line-height: 26px;
+            &:first-of-type{
+                margin-bottom: .25rem;
+            }
+            input{
+                height: 26px;
+                text-align: center;
+                border: 1px solid #edf0f2;
+                border-radius: .25rem;
+                width: 100%;
+            }
+        }
+        .input-group{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
     }
 }
 .resp-cover{
