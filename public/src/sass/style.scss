@@ -191,6 +191,13 @@ input::placeholder, textarea::placeholder{
             border-radius: 0;
         }
     }
+    textarea{
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        resize: none;
+        border: 1px solid $border-color;
+    }
 }
 .select2-dropdown{
     max-height: 250px;
