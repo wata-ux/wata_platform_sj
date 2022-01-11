@@ -105,7 +105,6 @@
                                         <div class="flex list-els">
                                             <div class="d-flex flex-row">
                                                 <h6 class="m-0">캐스팅</h6>
-                                                <a href="#n" class="badge-lightgray border-accent">세트 삭제</a>
                                                 <a href="#n" class="badge-lightgray text-dark">세트 해제</a>
                                             </div>
                                             <div class="card-subtitle text-50">
@@ -132,7 +131,11 @@
                                             <a href="#n" class="d-flex" data-toggle="popover" data-trigger="hover"><span class="material-icons font-size-16pt" style="color:#adadad">help_outline</span></a>
                                             <div class="popoverContainer d-none">
                                                 <h6>세트 해제</h6>
-                                                <p class="text-70 m-0 font-size-13pt">세트 해제 시 저장되었던 세트설정이 삭제되며 등록되었던 구성제품의 수는 개별로 등록 됩니다
+                                                <p class="text-70 m-0 font-size-13pt mb-2">
+                                                    [세트 해제]를 클릭하면 설정한 세트가 삭제됨과 동시에 세트로 묶인 구성 제품의 수는 현재 창고에서 개별 재고로 자동 집계됩니다.
+                                                </p>
+                                                <p class="text-70 m-0 font-size-13pt">
+                                                    가령 '창고1'에 '세트-가'에 '자재-A' 1개와 '자재-B' 2개가 묶여 있을 시, '세트-가'를 세트 해제 처리하면 '창고1'에는 '자재-A' 1개와 '자재-B' 2개만 재고로 잡히는 것입니다.
                                                 </p>
                                             </div>
                                         </div>
