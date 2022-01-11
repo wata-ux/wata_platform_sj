@@ -11845,7 +11845,7 @@ a.close.disabled {
     top: 0;
     z-index: 1060;
     display: block;
-    /* max-width: 304px; */
+    max-width: 304px;
     font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', Exo\ 2, Helvetica Neue, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
