@@ -8540,6 +8540,22 @@ dl.space-id{
                 border-radius: 50rem;
                 background-color: var(--gray);
             }
+            .ad-value{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: #FAFBFC;
+                border: 1px solid #E9EDF2;
+                padding: .125rem .5rem;
+                border-radius: 100px;
+                em{
+                    font-size: .8125rem;
+                }
+                span{
+                    font-size: .75rem;
+                    padding: 0 .125rem;
+                }
+            }
         }
     }
     .badge{
